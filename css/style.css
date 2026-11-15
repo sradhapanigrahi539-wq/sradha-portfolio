@@ -1120,6 +1120,81 @@ html[data-theme="light"] .dossier-header h3 i {
   color: var(--text-main);
 }
 
+/* Publication Card & Manuscript Styling */
+.publication-card {
+  border-left: 4px solid var(--accent-voltage);
+}
+
+.pub-badge-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pub-tag {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  text-transform: uppercase;
+  color: var(--accent-voltage);
+  background: var(--bg-recessed);
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--line);
+}
+
+html[data-theme="light"] .pub-tag {
+  color: #3b740a;
+}
+
+.pub-status {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  color: #87e52c;
+  background: rgba(135, 229, 44, 0.15);
+  padding: 3px 9px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+}
+
+html[data-theme="light"] .pub-status {
+  color: #15803d;
+  background: #dcfce7;
+}
+
+.pub-title {
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+.pub-authors {
+  font-size: 14.5px;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.pub-authors strong {
+  color: var(--text-main);
+}
+
+.pub-authors u {
+  text-decoration-color: var(--accent-voltage);
+  text-underline-offset: 3px;
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+.pub-abstract {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
 /* Experience Timeline */
 .timeline-list {
   position: relative;

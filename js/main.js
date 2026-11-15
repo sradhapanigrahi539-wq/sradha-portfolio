@@ -82,9 +82,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const roles = [
       'Power Systems & Renewable Microgrids',
       'COMSOL Multiphysics & Electrostatics',
-      'Substation Architecture & HV Diagnostics',
-      'Applied Embedded Systems & IoT Instrumentation',
-      'Solar PV Array Modeling & MPPT Control'
+      'ANN Controllers & UPQC Power Quality',
+      '33kV/11kV Substation & Grid Telemetry',
+      'Solar PV Array Modeling & MPPT Control',
+      'Embedded Systems & Python DSP Analytics'
     ];
     let roleIndex = 0;
     let charIndex = 0;
