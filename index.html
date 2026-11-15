@@ -1,1173 +1,1000 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sradha Panigrahi | Electrical & Electronics Engineer Portfolio</title>
-  <meta name="description" content="Portfolio of Sradha Panigrahi - Electrical & Electronics Engineering undergraduate specializing in Power Systems, UPQC, Microgrids, Artificial Neural Networks, Embedded IoT, and Signal Processing.">
-  <meta name="keywords" content="Sradha Panigrahi, Electrical Engineering, Electronics, Power Systems, UPQC, Microgrid, ANN Controller, MATLAB, Simulink, COMSOL Multiphysics, IoT, Python, NIST University">
-  <meta name="author" content="Sradha Panigrahi">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sradha Panigrahi — Electrical &amp; Electronics Engineering Portfolio</title>
+  <meta name="description" content="Engineering and research portfolio of Sradha Panigrahi — Power Systems, COMSOL Multiphysics Simulation, Renewable Microgrids, Smart Grids, and Embedded AIoT." />
+  <meta name="keywords" content="Sradha Panigrahi, Electrical Engineering, Power Systems, COMSOL Multiphysics, Solar PV Microgrid, MPPT, ESP32, Smart Grid, NIST University, IIT Bhubaneswar, TPSODL, Taiwan MS" />
+  <meta name="author" content="Sradha Panigrahi" />
+  <meta name="theme-color" content="#071A4A" />
 
-  <!-- Open Graph / Meta -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Sradha Panigrahi | Electrical & Electronics Engineer">
-  <meta property="og:description" content="Portfolio of Sradha Panigrahi — Power Systems, Smart Grid, ANN Controllers, Embedded IoT & Signal Processing.">
-  <meta property="og:image" content="assets/images/profile.jpg">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Sradha Panigrahi — Electrical &amp; Systems Engineering Portfolio" />
+  <meta property="og:description" content="Engineering portfolio featuring power systems, COMSOL Multiphysics electrostatics, renewable microgrids, and embedded IoT hardware." />
+  <meta property="og:image" content="assets/img/sradha.jpg" />
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230284c7'/><path d='M50 15 L25 55 L48 55 L42 85 L75 45 L52 45 Z' fill='%23ffffff'/></svg>">
+  <!-- Favicon (Inline Electric Power Circuit Mark in sample palette) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23071a4a'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%2387e52c'/%3E%3Cpath d='M16 2v7M16 23v7M2 16h7M23 16h7M6 6l5 5M21 21l5 5' stroke='%2387e52c' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E" />
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- JSON-LD Structured Data for Admissions & Engineering Research -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Sradha Panigrahi",
+    "jobTitle": "Electrical & Electronics Engineering Researcher",
+    "affiliation": "NIST University, India",
+    "email": "mailto:sradhapanigrahi539@gmail.com",
+    "telephone": "+916371443909",
+    "sameAs": [
+      "https://linkedin.com/in/sradha-panigrahi-ab732a290"
+    ],
+    "alumniOf": "NIST University",
+    "knowsAbout": ["Power Systems", "COMSOL Multiphysics", "Renewable Microgrids", "Smart Grid", "Embedded Systems", "IoT", "MATLAB Simulink"]
+  }
+  </script>
 </head>
 <body>
 
-  <!-- Background Particle / Grid Canvas -->
-  <canvas id="gridCanvas" aria-hidden="true"></canvas>
+  <!-- Ambient Engineering Backgrounds -->
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-radial-glow" aria-hidden="true"></div>
+  <div class="scroll-progress" id="scroll-progress"></div>
 
-  <!-- Ambient Glow Gradients -->
-  <div class="ambient-glow glow-1" aria-hidden="true"></div>
-  <div class="ambient-glow glow-2" aria-hidden="true"></div>
-
-  <!-- Header / Navigation Bar -->
-  <header class="navbar" id="navbar">
-    <div class="nav-container">
-      <a href="#hero" class="nav-logo" aria-label="Sradha Panigrahi Home">
-        <span class="logo-icon">⚡</span>
-        <span class="logo-text">Sradha<span class="highlight">.Panigrahi</span></span>
+  <!-- ==================== HEADER & NAVIGATION ==================== -->
+  <header class="site-nav" id="top-nav">
+    <div class="container nav-inner">
+      <a href="#home" class="nav-brand">
+        <span class="pulse-dot"></span>
+        <span>SP · POWER &amp; SYSTEMS</span>
       </a>
 
-      <nav class="nav-menu" id="navMenu">
-        <ul class="nav-links">
-          <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#experience" class="nav-link">Experience</a></li>
-          <li><a href="#projects" class="nav-link">Projects</a></li>
-          <li><a href="#skills" class="nav-link">Skills</a></li>
-          <li><a href="#achievements" class="nav-link">Achievements</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
+      <nav class="nav-links" aria-label="Main Navigation">
+        <a href="#home" class="active">Home</a>
+        <a href="#projects">Builds &amp; Models</a>
+        <a href="#research">Research Dossier</a>
+        <a href="#taiwan-focus">Taiwan MS Horizon</a>
+        <a href="#inquiry">Collaboration</a>
+        <a href="#contact">Contact</a>
       </nav>
 
       <div class="nav-actions">
-        <!-- Dark / Light Theme Toggle -->
-        <button id="themeToggle" class="theme-toggle" aria-label="Toggle Theme" title="Toggle Light / Dark Mode">
-          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="5"></circle>
-            <line x1="12" y1="1" x2="12" y2="3"></line>
-            <line x1="12" y1="21" x2="12" y2="23"></line>
-            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-            <line x1="1" y1="12" x2="3" y2="12"></line>
-            <line x1="21" y1="12" x2="23" y2="12"></line>
-            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-          </svg>
-          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-          </svg>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Obsidian &amp; Blueprint Mode">
+          <i class="fa-solid fa-sun icon-sun" aria-hidden="true"></i>
+          <i class="fa-solid fa-moon icon-moon" aria-hidden="true"></i>
         </button>
-
-        <!-- Download CV Action -->
-        <a href="assets/documents/Sradha_Panigrahi_Resume.pdf" class="btn btn-sm btn-outline cv-btn" download="Sradha_Panigrahi_Resume.pdf" target="_blank" rel="noopener noreferrer">
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-          <span>Resume</span>
-        </a>
-
-        <!-- Mobile Menu Hamburger -->
-        <button id="hamburgerBtn" class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
-          <span></span>
-          <span></span>
-          <span></span>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Open Navigation Menu" aria-expanded="false">
+          <i class="fa-solid fa-bars"></i>
         </button>
       </div>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero-section" id="hero">
-    <div class="container hero-container">
-      <div class="hero-content">
-        <!-- Status Badge -->
-        <div class="status-badge">
-          <span class="status-dot"></span>
-          <span>Available for Engineering Roles & Research</span>
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="#home">Home</a>
+    <a href="#projects">Builds &amp; Models</a>
+    <a href="#research">Research Dossier</a>
+    <a href="#taiwan-focus">Taiwan MS Horizon</a>
+    <a href="#inquiry">Collaboration</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <main id="main-content">
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section id="home" class="hero">
+      <!-- High-Voltage Power Grid & Substation Schematic SVG Background -->
+      <svg class="hero-schematic" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <!-- Busbars -->
+        <line x1="80" y1="200" x2="1120" y2="200" class="grid-busbar" />
+        <line x1="80" y1="520" x2="1120" y2="520" class="grid-busbar" />
+        <text x="90" y="190" fill="currentColor" font-family="'IBM Plex Mono', monospace" font-size="12" opacity="0.6">33kV PRIMARY BUSBAR</text>
+        <text x="90" y="510" fill="currentColor" font-family="'IBM Plex Mono', monospace" font-size="12" opacity="0.6">11kV DISTRIBUTION BUSBAR</text>
+
+        <!-- Transformers & Feeders -->
+        <circle cx="340" cy="330" r="32" fill="none" stroke="currentColor" stroke-width="2" opacity="0.4" />
+        <circle cx="340" cy="370" r="32" fill="none" stroke="currentColor" stroke-width="2" opacity="0.4" />
+        <line x1="340" y1="200" x2="340" y2="298" class="grid-line" />
+        <line x1="340" y1="402" x2="340" y2="520" class="grid-line" />
+        <line x1="340" y1="200" x2="340" y2="520" class="grid-pulse" />
+
+        <circle cx="860" cy="330" r="32" fill="none" stroke="currentColor" stroke-width="2" opacity="0.4" />
+        <circle cx="860" cy="370" r="32" fill="none" stroke="currentColor" stroke-width="2" opacity="0.4" />
+        <line x1="860" y1="200" x2="860" y2="298" class="grid-line" />
+        <line x1="860" y1="402" x2="860" y2="520" class="grid-line" />
+        <line x1="860" y1="200" x2="860" y2="520" class="grid-pulse" />
+
+        <!-- Circuit Breakers & Nodes -->
+        <rect x="325" y="240" width="30" height="20" rx="3" fill="none" stroke="var(--accent-voltage)" stroke-width="1.8" />
+        <rect x="845" y="240" width="30" height="20" rx="3" fill="none" stroke="var(--accent-voltage)" stroke-width="1.8" />
+        <circle cx="340" cy="200" r="5" fill="var(--accent-voltage)" />
+        <circle cx="860" cy="200" r="5" fill="var(--accent-voltage)" />
+        <circle cx="340" cy="520" r="5" fill="var(--accent-energy)" />
+        <circle cx="860" cy="520" r="5" fill="var(--accent-energy)" />
+
+        <!-- Sine Wave Modulation Background -->
+        <path d="M 0,360 Q 150,310 300,360 T 600,360 T 900,360 T 1200,360" fill="none" stroke="var(--accent-energy)" stroke-width="1" stroke-dasharray="3 5" opacity="0.25" />
+      </svg>
+
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            ELECTRICAL &amp; SYSTEMS RESEARCHER · NIST UNIVERSITY
+          </div>
+
+          <h1>
+            Sradha Panigrahi<br />
+            <span class="highlight">engineers resilient energy, physics models &amp; smart hardware.</span>
+          </h1>
+
+          <div class="hero-typewriter-box">
+            <i class="fa-solid fa-terminal" style="margin-right: 8px;"></i>
+            <span id="typewriter-text"></span>
+            <span class="typewriter-caret" aria-hidden="true"></span>
+          </div>
+
+          <p class="hero-lede">
+            Undergraduate in Electrical &amp; Electronics Engineering at NIST University with proven research experience at <strong>IIT Bhubaneswar</strong> and utility grid engineering at <strong>TPSODL</strong>. Specializing in high-voltage electrostatics simulation (COMSOL), renewable microgrid modeling (MATLAB/Simulink), and applied embedded IoT intelligence.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              <i class="fa-solid fa-bolt"></i> Explore Builds &amp; Models
+            </a>
+            <a href="assets/docs/Sradha_Panigrahi_Resume.pdf" target="_blank" rel="noopener" class="btn btn-ghost" id="hero-resume-btn">
+              <i class="fa-solid fa-file-arrow-down"></i> Download Résumé
+            </a>
+          </div>
+
+          <div class="hero-contact-strip">
+            <a href="mailto:sradhapanigrahi539@gmail.com" title="Email Sradha">
+              <i class="fa-solid fa-envelope"></i> sradhapanigrahi539@gmail.com
+            </a>
+            <a href="https://linkedin.com/in/sradha-panigrahi-ab732a290" target="_blank" rel="noopener" title="LinkedIn Profile">
+              <i class="fa-brands fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="tel:+916371443909" title="Call Sradha">
+              <i class="fa-solid fa-phone"></i> +91 6371443909
+            </a>
+            <span>
+              <i class="fa-solid fa-location-dot"></i> Berhampur, Odisha, India
+            </span>
+          </div>
         </div>
 
-        <h1 class="hero-title">
-          Hi, I'm <span class="text-gradient">Sradha Panigrahi</span>
-        </h1>
-        <h2 class="hero-subtitle">
-          Electrical & Electronics Engineer
-        </h2>
+        <!-- Hero Portrait Dial & Orbit Nodes -->
+        <div class="hero-portrait-wrapper">
+          <div class="instrument-dial-frame">
+            <!-- Rotating Engineering Dial Ring -->
+            <svg class="instrument-svg-ring" viewBox="0 0 400 400" aria-hidden="true">
+              <circle cx="200" cy="200" r="192" fill="none" stroke="var(--line-strong)" stroke-width="1.5" stroke-dasharray="2 12" />
+              <circle cx="200" cy="200" r="184" fill="none" stroke="var(--accent-voltage)" stroke-width="1" stroke-dasharray="5 15" opacity="0.75" />
+              <circle cx="200" cy="200" r="176" fill="none" stroke="var(--accent-energy)" stroke-width="1" stroke-dasharray="1 8" opacity="0.6" />
+              <!-- Substation Crosshair Ticks -->
+              <line x1="200" y1="0" x2="200" y2="16" stroke="var(--accent-voltage)" stroke-width="2" />
+              <line x1="200" y1="384" x2="200" y2="400" stroke="var(--accent-voltage)" stroke-width="2" />
+              <line x1="0" y1="200" x2="16" y2="200" stroke="var(--accent-voltage)" stroke-width="2" />
+              <line x1="384" y1="200" x2="400" y2="200" stroke="var(--accent-voltage)" stroke-width="2" />
+            </svg>
 
-        <p class="hero-bio">
-          Undergraduate engineer at <strong>NIST University</strong> specializing in <strong>Power Systems</strong>, 
-          <strong>UPQC & Microgrids</strong>, <strong>Artificial Neural Networks (ANN)</strong>, 
-          <strong>Embedded IoT</strong>, and <strong>Digital Signal Processing</strong>. Experienced researcher with internships at 
-          <strong>IIT Bhubaneswar</strong> and <strong>TPSODL</strong>.
-        </p>
+            <!-- Orbiting Specialization Tags -->
+            <div class="orbit-node node-top">
+              <span class="orbit-dot-voltage"></span> 33kV/11kV Power Grid &amp; ETAP
+            </div>
+            <div class="orbit-node node-left">
+              <span class="orbit-dot-purple"></span> COMSOL Multiphysics
+            </div>
+            <div class="orbit-node node-right">
+              <span class="orbit-dot-energy"></span> PV Microgrids &amp; BESS
+            </div>
 
-        <!-- Hero Action Buttons -->
-        <div class="hero-cta-group">
-          <a href="#projects" class="btn btn-primary">
-            <span>Explore Projects</span>
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-          </a>
-          <a href="#contact" class="btn btn-secondary">
-            <span>Get in Touch</span>
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-          </a>
-          <a href="https://linkedin.com/in/sradha-panigrahi-ab732a290" target="_blank" rel="noopener noreferrer" class="btn btn-icon" title="LinkedIn Profile" aria-label="LinkedIn">
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76c-.95 0-1.72.77-1.72 1.72s.77 1.72 1.72 1.72 1.72-.77 1.72-1.72-.77-1.72-1.72-1.72m1.4 9.74v-8.37H5.06v8.37h2.8z"/></svg>
-          </a>
-        </div>
-
-        <!-- Metric Badges Row -->
-        <div class="hero-stats">
-          <div class="stat-item">
-            <span class="stat-number">3+</span>
-            <span class="stat-label">Internships (IIT BBS, TPSODL)</span>
-          </div>
-          <div class="stat-divider"></div>
-          <div class="stat-item">
-            <span class="stat-number">5+</span>
-            <span class="stat-label">Advanced Engineering Projects</span>
-          </div>
-          <div class="stat-divider"></div>
-          <div class="stat-item">
-            <span class="stat-number">1st</span>
-            <span class="stat-label">Paper Presentation Winner</span>
-          </div>
-          <div class="stat-divider"></div>
-          <div class="stat-item">
-            <span class="stat-number">10+</span>
-            <span class="stat-label">Core Simulation & Dev Tools</span>
+            <!-- Profile Image Clip -->
+            <div class="portrait-photo-clip">
+              <img src="assets/img/sradha.jpg" alt="Sradha Panigrahi - Electrical &amp; Electronics Engineering Researcher" width="340" height="340" fetchpriority="high" />
+            </div>
           </div>
         </div>
       </div>
+    </section>
 
-      <!-- Hero Visual / Profile Photo Card -->
-      <div class="hero-visual">
-        <div class="profile-card-wrapper">
-          <div class="profile-hologram-ring"></div>
-          <div class="profile-image-container">
-            <img src="assets/images/profile.jpg" alt="Sradha Panigrahi - Electrical & Electronics Engineer" class="profile-img" loading="eager">
-            <div class="profile-overlay-gradient"></div>
+    <!-- ==================== INSTRUMENT TELEMETRY PANEL (SPEC STRIP) ==================== -->
+    <section class="spec-strip" id="spec-strip" aria-label="Engineering Metric Telemetry">
+      <div class="container spec-grid">
+        <!-- Gauge 1 -->
+        <div class="spec-card">
+          <svg class="gauge-svg" viewBox="0 0 64 64" aria-hidden="true">
+            <circle class="gauge-track" cx="32" cy="32" r="27" />
+            <circle class="gauge-arc" data-pct="0.85" cx="32" cy="32" r="27" />
+          </svg>
+          <div>
+            <div class="spec-number"><span data-target-count="5">0</span><span class="spec-unit">+ builds</span></div>
+            <div class="spec-label">Engineering Builds &amp; Models</div>
           </div>
+        </div>
 
-          <!-- Floating Badges -->
-          <div class="floating-badge badge-top-right">
-            <span class="badge-icon">⚡</span>
-            <div>
-              <span class="badge-title">UPQC & Microgrid</span>
-              <span class="badge-subtitle">ANN Control</span>
-            </div>
+        <!-- Gauge 2 -->
+        <div class="spec-card">
+          <svg class="gauge-svg" viewBox="0 0 64 64" aria-hidden="true">
+            <circle class="gauge-track" cx="32" cy="32" r="27" />
+            <circle class="gauge-arc energy-arc" data-pct="0.75" cx="32" cy="32" r="27" />
+          </svg>
+          <div>
+            <div class="spec-number"><span data-target-count="3">0</span><span class="spec-unit">roles</span></div>
+            <div class="spec-label">Research &amp; Utility Internships</div>
           </div>
+        </div>
 
-          <div class="floating-badge badge-bottom-left">
-            <span class="badge-icon">🔬</span>
-            <div>
-              <span class="badge-title">IIT Bhubaneswar</span>
-              <span class="badge-subtitle">COMSOL Simulation</span>
-            </div>
+        <!-- Gauge 3 -->
+        <div class="spec-card">
+          <svg class="gauge-svg" viewBox="0 0 64 64" aria-hidden="true">
+            <circle class="gauge-track" cx="32" cy="32" r="27" />
+            <circle class="gauge-arc amber-arc" data-pct="0.65" cx="32" cy="32" r="27" />
+          </svg>
+          <div>
+            <div class="spec-number"><span data-target-count="2">0</span><span class="spec-unit">honors</span></div>
+            <div class="spec-label">Circuit &amp; Paper Awards</div>
           </div>
+        </div>
 
-          <div class="floating-badge badge-bottom-right">
-            <span class="badge-icon">🐍</span>
-            <div>
-              <span class="badge-title">Python & DSP</span>
-              <span class="badge-subtitle">Noise Denoising</span>
-            </div>
+        <!-- Gauge 4 -->
+        <div class="spec-card">
+          <svg class="gauge-svg" viewBox="0 0 64 64" aria-hidden="true">
+            <circle class="gauge-track" cx="32" cy="32" r="27" />
+            <circle class="gauge-arc purple-arc" data-pct="0.80" cx="32" cy="32" r="27" />
+          </svg>
+          <div>
+            <div class="spec-number"><span data-target-count="3">0</span><span class="spec-unit">certs</span></div>
+            <div class="spec-label">NPTEL &amp; Design Certifications</div>
           </div>
         </div>
       </div>
+    </section>
+
+    <!-- Oscilloscope Harmonic Wave Divider -->
+    <div class="signal-divider" aria-hidden="true">
+      <svg class="signal-svg" viewBox="0 0 1200 48" preserveAspectRatio="none">
+        <path class="signal-path" d="M0,24 L420,24 L440,6 L460,42 L480,14 L500,34 L520,24 L1200,24" />
+      </svg>
     </div>
-  </section>
 
-  <!-- About Section -->
-  <section class="section about-section" id="about">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-tag">About Me</div>
-        <h2 class="section-title">Bridging Power Systems & Intelligent Computing</h2>
-        <p class="section-desc">
-          Passionate about building resilient electrical grids, high-efficiency renewable energy controllers, 
-          and hardware-software integrated intelligent systems.
-        </p>
-      </div>
-
-      <div class="about-grid">
-        <!-- Bio Card -->
-        <div class="about-card bio-card">
-          <h3 class="card-title">
-            <span class="title-icon">👩‍💻</span> Engineering Journey & Focus
-          </h3>
-          <p>
-            I am an Electrical & Electronics Engineering undergraduate at <strong>NIST University</strong>, Berhampur, Odisha. 
-            My passion lies at the intersection of electrical infrastructure, power electronics, and modern computational algorithms.
-          </p>
-          <p>
-            Through rigorous research at <strong>IIT Bhubaneswar</strong> and industry immersion at 
-            <strong>TP Southern Odisha Distribution Limited (TPSODL)</strong>, I have worked across the entire engineering pipeline: 
-            from finite-element multiphysics modeling (COMSOL) and grid-connected renewable simulation (MATLAB/Simulink) 
-            to high-voltage distribution substation protection and embedded IoT hardware.
-          </p>
-          <p>
-            Whether implementing an <strong>Artificial Neural Network (ANN) controller</strong> for Unified Power Quality Conditioners (UPQC), 
-            filtering complex noise from physical sensor signals via Python, or designing smart IoT irrigation hardware, 
-            I bring a strong analytical mindset and meticulous problem-solving ethos to every challenge.
-          </p>
-
-          <!-- Core Pillars -->
-          <div class="core-pillars">
-            <div class="pillar-item">
-              <div class="pillar-icon">⚡</div>
-              <div class="pillar-text">
-                <strong>Power Systems & Microgrids</strong>
-                <span>UPQC, MPPT, Substation, BESS</span>
-              </div>
-            </div>
-            <div class="pillar-item">
-              <div class="pillar-icon">🧠</div>
-              <div class="pillar-text">
-                <strong>Intelligent Control & ANN</strong>
-                <span>Neural compensation, adaptive tuning</span>
-              </div>
-            </div>
-            <div class="pillar-item">
-              <div class="pillar-icon">📶</div>
-              <div class="pillar-text">
-                <strong>DSP & Python Analytics</strong>
-                <span>Digital filtering, noise reduction</span>
-              </div>
-            </div>
-            <div class="pillar-item">
-              <div class="pillar-icon">🔌</div>
-              <div class="pillar-text">
-                <strong>Embedded Systems & IoT</strong>
-                <span>ESP32, Raspberry Pi, Sensors</span>
-              </div>
-            </div>
+    <!-- ==================== ENGINEERING BUILDS & INNOVATIONS ==================== -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            INNOVATION LOG &amp; SYSTEM BUILDS
           </div>
+          <h2>Field-Tested Engineering Builds &amp; Multiphysics Models</h2>
+          <p class="lead">
+            Rigorous projects spanning high-voltage electrostatics, renewable solar microgrids, predictive power asset analytics, optical spectroscopy, and embedded IoT security.
+          </p>
         </div>
 
-        <!-- Education & Credentials Card -->
-        <div class="about-card education-card">
-          <h3 class="card-title">
-            <span class="title-icon">🎓</span> Academic Timeline
-          </h3>
+        <div class="projects-grid">
 
-          <div class="timeline">
-            <!-- B.Tech -->
-            <div class="timeline-item">
-              <div class="timeline-dot current"></div>
-              <div class="timeline-content">
-                <span class="timeline-period">2023 – Present</span>
-                <h4 class="timeline-title">Bachelor of Technology (B.Tech)</h4>
-                <div class="timeline-subtitle">Electrical & Electronics Engineering (EEE)</div>
-                <div class="timeline-institution">NIST University, Berhampur, Odisha</div>
-                <p class="timeline-detail">
-                  Focusing on Power Generation, Microgrid Dynamics, Power Electronics, Signal Processing, and Microprocessor Architectures. Active participant in technical symposiums and circuit competitions.
+          <!-- Project 1: Featured COMSOL ESP Simulation -->
+          <article class="project-card featured-card">
+            <div class="project-media-wrap" data-lightbox-src="assets/img/esp_sim.jpg" data-lightbox-caption="2D COMSOL Multiphysics Simulation: Electric Potential Gradient & Particle Tracing Trajectories in Electrostatic Precipitator (ESP)">
+              <img src="assets/img/esp_sim.jpg" alt="COMSOL Multiphysics ESP Simulation" loading="lazy" width="600" height="400" />
+              <div class="media-badge-overlay">
+                <i class="fa-solid fa-magnifying-glass-plus"></i> View 2D Simulation Vector Plot
+              </div>
+            </div>
+
+            <div class="project-card-body">
+              <div class="project-card-header" style="padding: 0 0 14px; border-bottom: 1px solid var(--line-soft);">
+                <div>
+                  <div class="project-tag"><i class="fa-solid fa-atom"></i> P01 · MULTIPHYSICS SIMULATION</div>
+                  <h3 class="project-title">Electrostatic Precipitator (ESP) Design &amp; 2D Multiphysics Simulation</h3>
+                </div>
+                <button class="tts-control-btn" data-tts-target="esp-desc" data-tts-title="Electrostatic Precipitator Simulation" aria-label="Read project description aloud">
+                  <i class="fa-solid fa-volume-high"></i>
+                </button>
+              </div>
+
+              <div id="esp-desc" style="display: flex; flex-direction: column; gap: 10px;">
+                <p class="project-detail-line">
+                  <strong>Physics Challenge —</strong> Industrial exhaust filtration requires optimizing electric-field distribution to maximize sub-micron particulate matter capture while minimizing corona power loss.
+                </p>
+                <p class="project-detail-line">
+                  <strong>Simulation Solution —</strong> Designed and simulated a 2D electrostatic precipitator in COMSOL Multiphysics coupling electrostatics physics with charged particle-tracing dynamics to predict particle trajectory collection.
+                </p>
+                <p class="project-detail-line">
+                  <strong>Engineering Impact —</strong> Performed complex geometry modeling, non-uniform finite element meshing, and boundary-condition sweeps to determine optimal plate-to-wire spacing for maximum dust collection efficiency.
                 </p>
               </div>
+
+              <div class="project-stack-tags">
+                <span class="tag-badge tech-core">COMSOL Multiphysics</span>
+                <span class="tag-badge">Electrostatics</span>
+                <span class="tag-badge">Particle Tracing</span>
+                <span class="tag-badge">Finite Element Meshing</span>
+                <span class="tag-badge">High-Voltage Physics</span>
+              </div>
+
+              <div class="project-origin-footnote">
+                <strong>Lab origin —</strong> Research Internship @ <strong>Indian Institute of Technology (IIT) Bhubaneswar</strong>, Odisha.
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Grid-Connected Solar PV Microgrid & MPPT -->
+          <article class="project-card">
+            <div class="project-card-header">
+              <div>
+                <div class="project-tag"><i class="fa-solid fa-solar-panel"></i> P02 · RENEWABLE ENERGY &amp; BESS</div>
+                <h3 class="project-title">6.84 kW Grid-Connected Solar PV Microgrid with MPPT &amp; Lithium-Ion BESS</h3>
+              </div>
+              <button class="tts-control-btn" data-tts-target="pv-desc" data-tts-title="Solar PV Microgrid Modeling" aria-label="Read project description aloud">
+                <i class="fa-solid fa-volume-high"></i>
+              </button>
             </div>
 
-            <!-- Senior Secondary -->
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <div class="timeline-content">
-                <span class="timeline-period">2020 – 2022</span>
-                <h4 class="timeline-title">Senior Secondary School (+2 Science)</h4>
-                <div class="timeline-subtitle">Physics, Chemistry, Mathematics & Computing</div>
-                <div class="timeline-institution">Sankalp Senior Secondary School, Berhampur, Odisha</div>
-                <p class="timeline-detail">
-                  Strong analytical foundation in calculus, electromagnetism, and mechanics.
+            <div class="project-media-wrap" data-lightbox-src="assets/img/pv_microgrid.jpg" data-lightbox-caption="MATLAB Simulink Simulation: 6.84 kW Solar PV Grid-Connected Microgrid with MPPT & Lithium-ion BESS Voltage Stabilization">
+              <img src="assets/img/pv_microgrid.jpg" alt="MATLAB Simulink PV Microgrid Simulation" loading="lazy" width="500" height="320" />
+              <div class="media-badge-overlay">
+                <i class="fa-solid fa-magnifying-glass-plus"></i> View Simulink Schematic &amp; Scope
+              </div>
+            </div>
+
+            <div class="project-card-body">
+              <div id="pv-desc" style="display: flex; flex-direction: column; gap: 10px;">
+                <p class="project-detail-line">
+                  <strong>Problem —</strong> Variable cloud cover and solar intermittency induce voltage fluctuations and power-factor degradation in grid-tied distribution networks.
+                </p>
+                <p class="project-detail-line">
+                  <strong>Engineered Model —</strong> Formulated a comprehensive MATLAB/Simulink architecture for a 6.84 kW solar array coupled with an Perturb &amp; Observe MPPT boost converter and Lithium-ion Battery Energy Storage System (BESS).
+                </p>
+                <p class="project-detail-line">
+                  <strong>Stabilization —</strong> Implemented moving-average smoothing algorithms and inverter voltage-sag mitigation to sustain steady 400V 50Hz utility synchronization under harsh dynamic irradiation profiles.
                 </p>
               </div>
+
+              <div class="project-stack-tags">
+                <span class="tag-badge tech-core">MATLAB</span>
+                <span class="tag-badge tech-core">Simulink</span>
+                <span class="tag-badge">MPPT Control</span>
+                <span class="tag-badge">Lithium-ion BESS</span>
+                <span class="tag-badge">Grid Synchronization</span>
+                <span class="tag-badge">Voltage-Sag Mitigation</span>
+              </div>
+
+              <div class="project-origin-footnote">
+                <strong>Institution —</strong> Department of Electrical &amp; Electronics Engineering, NIST University.
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: PORTA-MP Portable Microplastic Detector -->
+          <article class="project-card">
+            <div class="project-card-header">
+              <div>
+                <div class="project-tag"><i class="fa-solid fa-microscope"></i> P03 · OPTICAL INSTRUMENTATION &amp; AI</div>
+                <h3 class="project-title">PORTA-MP: Portable AI-Enhanced Microplastic Detector</h3>
+              </div>
+              <button class="tts-control-btn" data-tts-target="mp-desc" data-tts-title="Portable Microplastic Detector" aria-label="Read project description aloud">
+                <i class="fa-solid fa-volume-high"></i>
+              </button>
             </div>
 
-            <!-- Secondary School -->
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <div class="timeline-content">
-                <span class="timeline-period">2008 – 2020</span>
-                <h4 class="timeline-title">Secondary School Examination (10th)</h4>
-                <div class="timeline-institution">K.C Public School, Berhampur, Odisha</div>
-                <p class="timeline-detail">
-                  Comprehensive academic curriculum with distinctions in Science and Mathematics.
+            <div class="project-media-wrap" data-lightbox-src="assets/img/microplastic.jpg" data-lightbox-caption="PORTA-MP Laboratory Prototype: Raspberry Pi 5 Optical Chamber, Nile Red Fluorescent Staining & Real-time GUI Particle Dashboard">
+              <img src="assets/img/microplastic.jpg" alt="PORTA-MP Microplastic Detector Prototype" loading="lazy" width="500" height="320" />
+              <div class="media-badge-overlay">
+                <i class="fa-solid fa-magnifying-glass-plus"></i> View Hardware Build &amp; GUI
+              </div>
+            </div>
+
+            <div class="project-card-body">
+              <div id="mp-desc" style="display: flex; flex-direction: column; gap: 10px;">
+                <p class="project-detail-line">
+                  <strong>Problem —</strong> Conventional microplastic quantification requires expensive FTIR or Raman spectrometry, making rapid field-level water audits impossible.
+                </p>
+                <p class="project-detail-line">
+                  <strong>Hardware Build —</strong> Built a field-ready analytical apparatus leveraging Raspberry Pi 5, high-intensity UV/Blue LED excitation arrays, and narrow optical emission bandpass filters with Nile Red fluorometric staining.
+                </p>
+                <p class="project-detail-line">
+                  <strong>Analytics Dashboard —</strong> Designed a native Python GUI interface providing real-time fluorescent particle counting, size histogram classification, and direct CSV audit exports for regulatory reporting.
                 </p>
               </div>
+
+              <div class="project-stack-tags">
+                <span class="tag-badge tech-core">Raspberry Pi 5</span>
+                <span class="tag-badge tech-core">Python</span>
+                <span class="tag-badge">Nile Red Fluorescence</span>
+                <span class="tag-badge">Optical Filters</span>
+                <span class="tag-badge">GUI Dashboard</span>
+                <span class="tag-badge">Embedded Vision</span>
+              </div>
+
+              <div class="project-origin-footnote">
+                <strong>Project scope —</strong> Environmental analytical instrumentation, NIST University.
+              </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+          </article>
 
-  <!-- Experience Section -->
-  <section class="section experience-section" id="experience">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-tag">Experience</div>
-        <h2 class="section-title">Internships & Research Positions</h2>
-        <p class="section-desc">
-          Hands-on technical contributions across top research institutes, power distribution utilities, and academic centers.
-        </p>
-      </div>
-
-      <div class="experience-cards">
-        <!-- IIT Bhubaneswar -->
-        <div class="exp-card highlight-card">
-          <div class="exp-header">
-            <div class="exp-role-info">
-              <div class="exp-company-logo">IIT</div>
+          <!-- Project 4: Knock Pattern Smart Door Lock -->
+          <article class="project-card">
+            <div class="project-card-header">
               <div>
-                <h3 class="exp-role">Research Intern</h3>
-                <h4 class="exp-company">Indian Institute of Technology (IIT) Bhubaneswar</h4>
-                <div class="exp-location">Bhubaneswar, Odisha, India</div>
+                <div class="project-tag"><i class="fa-solid fa-shield-halved"></i> P04 · EMBEDDED SECURITY &amp; IOT</div>
+                <h3 class="project-title">Knocking Pattern Based Smart Door Lock System</h3>
+              </div>
+              <button class="tts-control-btn" data-tts-target="knock-desc" data-tts-title="Knocking Pattern Smart Lock" aria-label="Read project description aloud">
+                <i class="fa-solid fa-volume-high"></i>
+              </button>
+            </div>
+
+            <div class="project-media-wrap" data-lightbox-src="assets/img/knock_lock.jpg" data-lightbox-caption="ESP32 Knock Pattern Lock Hardware Prototype: Piezo Acoustic Sensor, OLED Status Display & Solenoid Lock Relay">
+              <img src="assets/img/knock_lock.jpg" alt="Knock Pattern Smart Lock Hardware Setup" loading="lazy" width="500" height="320" />
+              <div class="media-badge-overlay">
+                <i class="fa-solid fa-magnifying-glass-plus"></i> View Circuit Architecture
               </div>
             </div>
-            <div class="exp-badge-date">
-              <span class="date-badge">May 2026 – Jul 2026</span>
-            </div>
-          </div>
-          <div class="exp-body">
-            <p class="exp-description">
-              Conducted advanced multiphysics modeling and computational fluid-electric field analysis for particulate matter mitigation in industrial emission streams.
-            </p>
-            <ul class="exp-bullet-list">
-              <li>
-                <strong>COMSOL Multiphysics Modeling:</strong> Formulated and simulated a 2D/3D Electrostatic Precipitator (ESP) integrating electrostatic Poisson equations with particle-tracing physics.
-              </li>
-              <li>
-                <strong>Geometry & Meshing Optimization:</strong> Performed complex geometry modeling, boundary-condition setup, and adaptive mesh refinement across high-voltage discharge electrodes and grounded collection plates.
-              </li>
-              <li>
-                <strong>Electric Field Distribution & Trajectory Analysis:</strong> Evaluated electric field gradients, corona inception zones, and particulate collection efficiency under dynamic gas velocity regimes.
-              </li>
-            </ul>
-            <div class="exp-tags">
-              <span class="tech-tag">COMSOL Multiphysics</span>
-              <span class="tech-tag">Electrostatics</span>
-              <span class="tech-tag">Particle Tracing</span>
-              <span class="tech-tag">Finite Element Analysis</span>
-              <span class="tech-tag">Emission Control</span>
-            </div>
-          </div>
-        </div>
 
-        <!-- TPSODL -->
-        <div class="exp-card">
-          <div class="exp-header">
-            <div class="exp-role-info">
-              <div class="exp-company-logo tpsodl">TP</div>
+            <div class="project-card-body">
+              <div id="knock-desc" style="display: flex; flex-direction: column; gap: 10px;">
+                <p class="project-detail-line">
+                  <strong>Problem —</strong> Traditional biometric or keypad smart locks suffer from high standby power consumption, keypad wear, and vulnerability to smudge-attacks.
+                </p>
+                <p class="project-detail-line">
+                  <strong>Acoustic Recognition —</strong> Engineered a low-power access system using an ESP32 microcontroller and high-sensitivity piezoelectric disc to sample acoustic strike intervals in real-time.
+                </p>
+                <p class="project-detail-line">
+                  <strong>Hardware Execution —</strong> Incorporated multi-user rhythm enrollment, timing-tolerance threshold filters, relay-actuated 12V solenoid unlocking, and an I2C OLED display for live status visualization.
+                </p>
+              </div>
+
+              <div class="project-stack-tags">
+                <span class="tag-badge tech-core">ESP32</span>
+                <span class="tag-badge">Piezo Vibration Sensor</span>
+                <span class="tag-badge">Acoustic Signal Processing</span>
+                <span class="tag-badge">OLED Display</span>
+                <span class="tag-badge">Relay Control</span>
+                <span class="tag-badge">Embedded C</span>
+              </div>
+
+              <div class="project-origin-footnote">
+                <strong>Project scope —</strong> Hardware prototype &amp; sensor integration, NIST University.
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 5: Substation Diagnostics & Grid Architecture -->
+          <article class="project-card">
+            <div class="project-card-header">
               <div>
-                <h3 class="exp-role">Power Systems Intern</h3>
-                <h4 class="exp-company">TP Southern Odisha Distribution Limited (TPSODL)</h4>
-                <div class="exp-location">Berhampur / Odisha, India</div>
+                <div class="project-tag"><i class="fa-solid fa-tower-broadcast"></i> P05 · POWER UTILITY &amp; SCADA</div>
+                <h3 class="project-title">33/11kV Substation Architecture &amp; Transformer Asset Diagnostics</h3>
+              </div>
+              <button class="tts-control-btn" data-tts-target="grid-desc" data-tts-title="Power Substation Architecture" aria-label="Read project description aloud">
+                <i class="fa-solid fa-volume-high"></i>
+              </button>
+            </div>
+
+            <div class="project-media-wrap" data-lightbox-src="assets/img/substation.jpg" data-lightbox-caption="33kV/11kV Distribution Substation SCADA Single-Line Diagram & ETAP Digital Twin Diagnostic Interface">
+              <img src="assets/img/substation.jpg" alt="Substation SCADA & ETAP Digital Twin" loading="lazy" width="500" height="320" />
+              <div class="media-badge-overlay">
+                <i class="fa-solid fa-magnifying-glass-plus"></i> View SCADA Single-Line Diagram
               </div>
             </div>
-            <div class="exp-badge-date">
-              <span class="date-badge">Jun 2025 – Jul 2025</span>
-            </div>
-          </div>
-          <div class="exp-body">
-            <p class="exp-description">
-              Gained hands-on utility-scale power distribution experience across high-voltage substations, transformer diagnostic procedures, and feeder asset management.
-            </p>
-            <ul class="exp-bullet-list">
-              <li>
-                <strong>Substation Architecture & Grid Operations:</strong> Analyzed 33/11 kV distribution substation layouts, single-line diagrams (SLDs), busbar configurations, and real-time SCADA grid management protocols.
-              </li>
-              <li>
-                <strong>Predictive Maintenance & Asset Health:</strong> Studied condition monitoring techniques for power transformers, dissolved gas analysis (DGA), insulation resistance, and vacuum/SF6 circuit breakers.
-              </li>
-              <li>
-                <strong>Reliability & Metric Evaluation:</strong> Evaluated SAIDI/SAIFI grid reliability metrics and high-voltage operational efficiency, identifying mitigation strategies for technical distribution losses.
-              </li>
-            </ul>
-            <div class="exp-tags">
-              <span class="tech-tag">Power Distribution</span>
-              <span class="tech-tag">Substation Design</span>
-              <span class="tech-tag">Predictive Maintenance</span>
-              <span class="tech-tag">Switchgear & Protection</span>
-              <span class="tech-tag">Grid Reliability</span>
-            </div>
-          </div>
-        </div>
 
-        <!-- NIST University C Programming -->
-        <div class="exp-card">
-          <div class="exp-header">
-            <div class="exp-role-info">
-              <div class="exp-company-logo nist">C</div>
+            <div class="project-card-body">
+              <div id="grid-desc" style="display: flex; flex-direction: column; gap: 10px;">
+                <p class="project-detail-line">
+                  <strong>Industrial Context —</strong> Electric distribution utilities manage thousands of high-voltage transformers and vacuum switchgears requiring predictive failure modeling to curb unbudgeted outages.
+                </p>
+                <p class="project-detail-line">
+                  <strong>Utility Engineering —</strong> Evaluated 33/11kV substation single-line diagrams (SLD), busbar switching configurations, protection relays, and circuit breaker operational sequencing at TP Southern Odisha Distribution Limited.
+                </p>
+                <p class="project-detail-line">
+                  <strong>Predictive Maintenance —</strong> Investigated dissolved gas analysis (DGA), winding temperature thresholds, and transformer health metrics to support predictive asset management protocols.
+                </p>
+              </div>
+
+              <div class="project-stack-tags">
+                <span class="tag-badge tech-core">Substation Engineering</span>
+                <span class="tag-badge tech-core">ETAP</span>
+                <span class="tag-badge">Switchgear &amp; Protection</span>
+                <span class="tag-badge">Power Transformers</span>
+                <span class="tag-badge">SCADA SLD</span>
+                <span class="tag-badge">Smart Grid</span>
+              </div>
+
+              <div class="project-origin-footnote">
+                <strong>Industrial Internship —</strong> TP Southern Odisha Distribution Limited (TPSODL), Odisha, India.
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 6: Smart Irrigation IoT Telemetry (Paper Winner) -->
+          <article class="project-card">
+            <div class="project-card-header">
               <div>
-                <h3 class="exp-role">C Programming Intern</h3>
-                <h4 class="exp-company">NIST University</h4>
-                <div class="exp-location">Berhampur, Odisha, India</div>
+                <div class="project-tag"><i class="fa-solid fa-leaf"></i> P06 · SMART AGRI &amp; TELEMETRY</div>
+                <h3 class="project-title">Smart Irrigation &amp; Soil Telemetry System (Award-Winning Paper)</h3>
+              </div>
+              <button class="tts-control-btn" data-tts-target="agri-desc" data-tts-title="Smart Irrigation System" aria-label="Read project description aloud">
+                <i class="fa-solid fa-volume-high"></i>
+              </button>
+            </div>
+
+            <div class="project-media-wrap" data-lightbox-src="assets/img/irrigation.jpg" data-lightbox-caption="Precision Smart Irrigation Telemetry Node: Multi-Depth Soil Moisture Probes, Solar Harvester & Field Telemetry Dashboard">
+              <img src="assets/img/irrigation.jpg" alt="Smart Irrigation IoT Field Setup" loading="lazy" width="500" height="320" />
+              <div class="media-badge-overlay">
+                <i class="fa-solid fa-magnifying-glass-plus"></i> View Field Telemetry Deployment
               </div>
             </div>
-            <div class="exp-badge-date">
-              <span class="date-badge">May 2024 – Jun 2024</span>
+
+            <div class="project-card-body">
+              <div id="agri-desc" style="display: flex; flex-direction: column; gap: 10px;">
+                <p class="project-detail-line">
+                  <strong>Challenge —</strong> Over-irrigation and manual water pumping waste over 40% of agricultural fresh water and drain grid energy.
+                </p>
+                <p class="project-detail-line">
+                  <strong>Engineered System —</strong> Developed a solar-powered edge telemetry node interfacing multi-depth capacitive soil moisture, temperature, and electrical conductivity probes with automated relay valve drivers.
+                </p>
+                <p class="project-detail-line">
+                  <strong>Accolade —</strong> Awarded <strong>Winner, Paper Presentation</strong> at NIST University for novel telemetry architecture and water conservation metrics.
+                </p>
+              </div>
+
+              <div class="project-stack-tags">
+                <span class="tag-badge tech-core">IoT Telemetry</span>
+                <span class="tag-badge">Soil Sensing</span>
+                <span class="tag-badge">MQTT</span>
+                <span class="tag-badge">Solar Harvester</span>
+                <span class="tag-badge">Automated Irrigation</span>
+              </div>
+
+              <div class="project-origin-footnote">
+                <strong>Recognition —</strong> 1st Prize, Technical Paper Presentation, NIST University.
+              </div>
             </div>
-          </div>
-          <div class="exp-body">
-            <p class="exp-description">
-              Solidified structured programming, memory optimization, and algorithmic problem-solving for engineering systems and hardware interfacing.
-            </p>
-            <ul class="exp-bullet-list">
-              <li>
-                <strong>Structured Programming Foundations:</strong> Mastered low-level pointer arithmetic, memory allocation, multi-file compilation, and structured data handling.
-              </li>
-              <li>
-                <strong>Algorithm Implementation:</strong> Designed efficient numerical algorithms, matrix transformations, and numerical methods in C for engineering calculations.
-              </li>
-            </ul>
-            <div class="exp-tags">
-              <span class="tech-tag">C Language</span>
-              <span class="tech-tag">Data Structures</span>
-              <span class="tech-tag">Algorithms</span>
-              <span class="tech-tag">Memory Management</span>
-            </div>
-          </div>
+          </article>
+
         </div>
       </div>
+    </section>
+
+    <!-- Signal Wave Divider -->
+    <div class="signal-divider" aria-hidden="true">
+      <svg class="signal-svg" viewBox="0 0 1200 48" preserveAspectRatio="none">
+        <path class="signal-path" d="M0,24 L720,24 L740,42 L760,6 L780,34 L800,14 L820,24 L1200,24" />
+      </svg>
     </div>
-  </section>
 
-  <!-- Projects Section -->
-  <section class="section projects-section" id="projects">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-tag">Featured Projects</div>
-        <h2 class="section-title">Engineering Innovations & Simulations</h2>
-        <p class="section-desc">
-          Rigorous projects encompassing Power Quality Conditioning, Digital Signal Processing, Smart Embedded Automation, and Multiphysics Modeling.
-        </p>
-      </div>
-
-      <!-- Project Filters -->
-      <div class="filter-controls">
-        <button class="filter-btn active" data-filter="all">All Projects (5)</button>
-        <button class="filter-btn" data-filter="power">Power & Microgrid</button>
-        <button class="filter-btn" data-filter="ai-dsp">AI & Signal Processing</button>
-        <button class="filter-btn" data-filter="embedded">Embedded & IoT</button>
-        <button class="filter-btn" data-filter="simulation">Multiphysics Simulation</button>
-      </div>
-
-      <!-- Project Grid -->
-      <div class="projects-grid">
-
-        <!-- PROJECT 1: Electrostatic Precipitator (ESP) Design & Simulation -->
-        <div class="project-card" data-category="simulation">
-          <div class="project-banner bg-comsol">
-            <div class="banner-badge">IIT Bhubaneswar Research</div>
-            <div class="project-visual-icon">🔬⚡</div>
+    <!-- ==================== RESEARCH DOSSIER & CAREER ==================== -->
+    <section id="research" class="section">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            ACADEMIC &amp; RESEARCH DOSSIER
           </div>
-          <div class="project-content">
-            <div class="project-meta">
-              <span class="project-category">Computational Multiphysics</span>
-              <span class="project-year">COMSOL Multiphysics</span>
-            </div>
-            <h3 class="project-title">Electrostatic Precipitator (ESP) Design & Multiphysics Simulation</h3>
-            <p class="project-description">
-              Designed and simulated a 2D/3D Electrostatic Precipitator coupling electrostatic Poisson fields and particle-tracing fluid 
-              dynamics to model particulate-matter (PM2.5 / PM10) separation in industrial exhaust.
-            </p>
-            <div class="project-features">
-              <div class="feature-item">
-                <span class="check-icon">✓</span>
-                <span>Executed detailed electrode geometry modeling, boundary conditions, and boundary-layer meshing.</span>
-              </div>
-              <div class="feature-item">
-                <span class="check-icon">✓</span>
-                <span>Analyzed corona discharge, charge accumulation on dust particles, and electrostatic precipitation forces.</span>
-              </div>
-              <div class="feature-item">
-                <span class="check-icon">✓</span>
-                <span>Optimized electrode spacing and high-voltage supply parameters to maximize collection efficiency.</span>
-              </div>
-            </div>
-            <div class="project-tags">
-              <span class="tech-tag">COMSOL Multiphysics</span>
-              <span class="tech-tag">Electrostatics</span>
-              <span class="tech-tag">Particle Tracing</span>
-              <span class="tech-tag">High Voltage Engineering</span>
-              <span class="tech-tag">FEA Simulation</span>
-            </div>
-            <div class="project-card-footer">
-              <button class="btn btn-sm btn-outline open-modal-btn" data-modal="modal-esp">
-                <span>View Simulation Details</span>
-                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- PROJECT 2: ANN Controller with UPQC Integrated with Microgrid -->
-        <div class="project-card" data-category="power ai-dsp">
-          <div class="project-banner bg-ann">
-            <div class="banner-badge">Flagship Power Quality & AI</div>
-            <div class="project-visual-icon">⚡🧠</div>
-          </div>
-          <div class="project-content">
-            <div class="project-meta">
-              <span class="project-category">Power Systems & AI</span>
-              <span class="project-year">MATLAB • Simulink</span>
-            </div>
-            <h3 class="project-title">Design of ANN Controller & Implementation with UPQC Integrated with Microgrid</h3>
-            <p class="project-description">
-              Designed an intelligent Artificial Neural Network (ANN) controller coupled with a Unified Power Quality Conditioner (UPQC) 
-              in a renewable-dominated microgrid to mitigate severe voltage sags, swells, and harmonic distortions.
-            </p>
-            <div class="project-features">
-              <div class="feature-item">
-                <span class="check-icon">✓</span>
-                <span>Replaced conventional PI controllers with a backpropagation-trained ANN for ultra-fast dynamic compensation.</span>
-              </div>
-              <div class="feature-item">
-                <span class="check-icon">✓</span>
-                <span>Coordinated Series Active Filter (voltage sag/swell mitigation) & Shunt Active Filter (current harmonic elimination).</span>
-              </div>
-              <div class="feature-item">
-                <span class="check-icon">✓</span>
-                <span>Achieved significant reduction in Total Harmonic Distortion (THD) in compliance with IEEE 519 standards.</span>
-              </div>
-            </div>
-            <div class="project-tags">
-              <span class="tech-tag">MATLAB</span>
-              <span class="tech-tag">Simulink</span>
-              <span class="tech-tag">ANN</span>
-              <span class="tech-tag">UPQC</span>
-              <span class="tech-tag">Microgrid</span>
-              <span class="tech-tag">Power Quality</span>
-              <span class="tech-tag">THD Mitigation</span>
-            </div>
-            <div class="project-card-footer">
-              <button class="btn btn-sm btn-outline open-modal-btn" data-modal="modal-upqc">
-                <span>View Architecture & Specs</span>
-                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- PROJECT 3: Grid-Connected PV Microgrid Modeling with MPPT Controller -->
-        <div class="project-card" data-category="power">
-          <div class="project-banner bg-solar">
-            <div class="banner-badge">Renewable Energy Systems</div>
-            <div class="project-visual-icon">☀️🔋</div>
-          </div>
-          <div class="project-content">
-            <div class="project-meta">
-              <span class="project-category">Renewable Power Systems</span>
-              <span class="project-year">MATLAB • Simulink</span>
-            </div>
-            <h3 class="project-title">Grid-Connected PV Microgrid Modeling with MPPT Controller</h3>
-            <p class="project-description">
-              Modeled a 6.84 kW grid-connected solar photovoltaic array integrated with a Lithium-ion Battery Energy Storage System (BESS) 
-              and dynamic Perturb & Observe (P&O) MPPT control.
-            </p>
-            <div class="project-features">
-              <div class="feature-item">
-                <span class="check-icon">✓</span>
-                <span>Implemented MPPT tracking algorithm to optimize solar PV extraction under variable irradiance and temperature.</span>
-              </div>
-              <div class="feature-item">
-                <span class="check-icon">✓</span>
-                <span>Integrated Li-ion BESS with bidirectional DC-DC converter for power smoothing and grid stability.</span>
-              </div>
-              <div class="feature-item">
-                <span class="check-icon">✓</span>
-                <span>Applied moving-average smoothing algorithms and voltage-sag mitigation to fulfill grid interconnection criteria.</span>
-              </div>
-            </div>
-            <div class="project-tags">
-              <span class="tech-tag">MATLAB</span>
-              <span class="tech-tag">Simulink</span>
-              <span class="tech-tag">Solar PV (6.84 kW)</span>
-              <span class="tech-tag">MPPT (P&O)</span>
-              <span class="tech-tag">Lithium-ion BESS</span>
-              <span class="tech-tag">Voltage-Sag Mitigation</span>
-            </div>
-            <div class="project-card-footer">
-              <button class="btn btn-sm btn-outline open-modal-btn" data-modal="modal-pv">
-                <span>View Model Parameters</span>
-                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- PROJECT 4: Smart Irrigation System -->
-        <div class="project-card" data-category="embedded">
-          <div class="project-banner bg-irrigation">
-            <div class="banner-badge">Award-Winning Project</div>
-            <div class="project-visual-icon">🌱💧</div>
-          </div>
-          <div class="project-content">
-            <div class="project-meta">
-              <span class="project-category">IoT & Embedded Systems</span>
-              <span class="project-year">ESP32 • Arduino • Sensors</span>
-            </div>
-            <h3 class="project-title">Smart Irrigation System with Automated Sensor Integration</h3>
-            <p class="project-description">
-              Engineered an automated, climate-responsive irrigation system incorporating multi-depth soil moisture sensing, 
-              temperature/humidity monitoring, and automated relay-driven solenoid valves to conserve water.
-            </p>
-            <div class="project-features">
-              <div class="feature-item">
-                <span class="check-icon">✓</span>
-                <span>Integrated capacitive soil moisture sensors, DHT sensors, and flow meters with closed-loop feedback.</span>
-              </div>
-              <div class="feature-item">
-                <span class="check-icon">✓</span>
-                <span>Reduced agricultural water usage by ~40% through threshold-triggered dynamic actuation.</span>
-              </div>
-              <div class="feature-item">
-                <span class="check-icon">✓</span>
-                <span><strong>Awarded 1st Place</strong> in the Paper Presentation Competition at NIST University.</span>
-              </div>
-            </div>
-            <div class="project-tags">
-              <span class="tech-tag">Embedded C/C++</span>
-              <span class="tech-tag">ESP32 / Arduino</span>
-              <span class="tech-tag">Soil Moisture Sensors</span>
-              <span class="tech-tag">Actuators & Relays</span>
-              <span class="tech-tag">IoT Automation</span>
-              <span class="tech-tag">Resource Conservation</span>
-            </div>
-            <div class="project-card-footer">
-              <button class="btn btn-sm btn-outline open-modal-btn" data-modal="modal-irrigation">
-                <span>View System Architecture</span>
-                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- PROJECT 5: Digital Filter for Noise Reduction & Feature Extraction from Signal Using Python -->
-        <div class="project-card" data-category="ai-dsp">
-          <div class="project-banner bg-dsp">
-            <div class="banner-badge">Signal Intelligence</div>
-            <div class="project-visual-icon">📈🐍</div>
-          </div>
-          <div class="project-content">
-            <div class="project-meta">
-              <span class="project-category">DSP & Python Analytics</span>
-              <span class="project-year">Python • SciPy</span>
-            </div>
-            <h3 class="project-title">Digital Filter of Noise Reduction & Feature Extraction from Signal Using Python</h3>
-            <p class="project-description">
-              Engineered a digital signal processing pipeline in Python for real-time sensor/electrical signal noise attenuation, 
-              frequency-domain decomposition, and automated feature extraction for machine diagnostics.
-            </p>
-            <div class="project-features">
-              <div class="feature-item">
-                <span class="check-icon">✓</span>
-                <span>Implemented Butterworth, Chebyshev, and Wavelet de-noising filters with zero-phase distortion.</span>
-              </div>
-              <div class="feature-item">
-                <span class="check-icon">✓</span>
-                <span>Extracted time-domain features (RMS, kurtosis, crest factor) and frequency features (PSD, spectral centroid).</span>
-              </div>
-              <div class="feature-item">
-                <span class="check-icon">✓</span>
-                <span>Interactive visualization dashboard plotting raw vs. filtered waveforms and FFT spectrograms.</span>
-              </div>
-            </div>
-            <div class="project-tags">
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">SciPy Signal</span>
-              <span class="tech-tag">NumPy</span>
-              <span class="tech-tag">Matplotlib</span>
-              <span class="tech-tag">IIR/FIR Filters</span>
-              <span class="tech-tag">FFT / PSD</span>
-              <span class="tech-tag">Feature Extraction</span>
-            </div>
-            <div class="project-card-footer">
-              <button class="btn btn-sm btn-outline open-modal-btn" data-modal="modal-dsp">
-                <span>View Filter Pipeline</span>
-                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-              </button>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Technical Skills Section -->
-  <section class="section skills-section" id="skills">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-tag">Technical Competencies</div>
-        <h2 class="section-title">Engineering Toolkit & Domain Knowledge</h2>
-        <p class="section-desc">
-          A blend of industrial simulation, hardware prototyping, scientific computing, and power system analysis.
-        </p>
-      </div>
-
-      <div class="skills-grid">
-        <!-- Power & Energy Systems -->
-        <div class="skill-category-card">
-          <div class="skill-header">
-            <span class="skill-cat-icon">⚡</span>
-            <h3>Power Systems & Grid</h3>
-          </div>
-          <div class="skill-list">
-            <div class="skill-pill">Power Generation & Transmission</div>
-            <div class="skill-pill">Distribution & Substation Layouts</div>
-            <div class="skill-pill">Switchgear & Protection</div>
-            <div class="skill-pill">Microgrids & Renewable Systems</div>
-            <div class="skill-pill">UPQC & Power Quality</div>
-            <div class="skill-pill">Transformer Predictive Maintenance</div>
-            <div class="skill-pill">BESS & Solar PV Integration</div>
-          </div>
-        </div>
-
-        <!-- Simulation & Modeling -->
-        <div class="skill-category-card">
-          <div class="skill-header">
-            <span class="skill-cat-icon">📊</span>
-            <h3>Simulation & CAD Tools</h3>
-          </div>
-          <div class="skill-list">
-            <div class="skill-pill highlight-pill">MATLAB & Simulink</div>
-            <div class="skill-pill highlight-pill">COMSOL Multiphysics</div>
-            <div class="skill-pill">ETAP (Power System Analysis)</div>
-            <div class="skill-pill">LabVIEW</div>
-            <div class="skill-pill">Circuit Simulation (SPICE/Multisim)</div>
-          </div>
-        </div>
-
-        <!-- Embedded & Hardware -->
-        <div class="skill-category-card">
-          <div class="skill-header">
-            <span class="skill-cat-icon">🔌</span>
-            <h3>Embedded Systems & IoT</h3>
-          </div>
-          <div class="skill-list">
-            <div class="skill-pill">Arduino Uno/Nano</div>
-            <div class="skill-pill">ESP32 & ESP8266</div>
-            <div class="skill-pill">Raspberry Pi</div>
-            <div class="skill-pill">8051 Microcontroller</div>
-            <div class="skill-pill">8086 Microprocessor & 8255 PPI</div>
-            <div class="skill-pill">Sensor Interfacing & Actuators</div>
-            <div class="skill-pill">MQTT & Home Automation</div>
-          </div>
-        </div>
-
-        <!-- Programming & Data Science -->
-        <div class="skill-category-card">
-          <div class="skill-header">
-            <span class="skill-cat-icon">💻</span>
-            <h3>Programming & Analytics</h3>
-          </div>
-          <div class="skill-list">
-            <div class="skill-pill highlight-pill">Python (NumPy, SciPy, Matplotlib)</div>
-            <div class="skill-pill">C Programming</div>
-            <div class="skill-pill">SQL Database Design</div>
-            <div class="skill-pill">8085/8086 Assembly Language</div>
-            <div class="skill-pill">Digital Signal Processing (DSP)</div>
-            <div class="skill-pill">Artificial Neural Networks (ANN)</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Interactive Engineer Terminal -->
-      <div class="terminal-container">
-        <div class="terminal-bar">
-          <div class="terminal-dots">
-            <span class="dot red"></span>
-            <span class="dot yellow"></span>
-            <span class="dot green"></span>
-          </div>
-          <div class="terminal-title">sradha@engineer-station: ~/portfolio</div>
-          <div class="terminal-badge">Interactive Console</div>
-        </div>
-        <div class="terminal-body" id="terminalOutput">
-          <p class="term-line term-welcome"><span class="term-accent">Welcome to Sradha's Interactive Engineering Station!</span></p>
-          <p class="term-line">Type a command or click a quick shortcut: <span class="term-chip" onclick="runTerminalCommand('skills')">skills</span> <span class="term-chip" onclick="runTerminalCommand('projects')">projects</span> <span class="term-chip" onclick="runTerminalCommand('contact')">contact</span> <span class="term-chip" onclick="runTerminalCommand('help')">help</span> <span class="term-chip" onclick="runTerminalCommand('clear')">clear</span></p>
-        </div>
-        <form class="terminal-input-row" id="terminalForm">
-          <span class="term-prompt">visitor@sradha:~$</span>
-          <input type="text" id="terminalInput" class="term-input" placeholder="Try typing 'skills', 'projects', or 'contact'..." autocomplete="off">
-        </form>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Achievements & Certifications Section -->
-  <section class="section achievements-section" id="achievements">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-tag">Recognition & Credentials</div>
-        <h2 class="section-title">Honors, Awards & Certifications</h2>
-        <p class="section-desc">
-          Demonstrated excellence in technical paper presentations, circuit design hackathons, and certified professional specializations.
-        </p>
-      </div>
-
-      <div class="achievements-grid">
-        <!-- Paper Presentation Winner -->
-        <div class="achievement-card gold-border">
-          <div class="badge-ribbon">1st Prize Winner</div>
-          <div class="achieve-icon">🏆</div>
-          <h3 class="achieve-title">Paper Presentation Winner</h3>
-          <div class="achieve-org">NIST University Technical Symposium</div>
-          <p class="achieve-desc">
-            Awarded First Place for presenting an innovative research paper on <strong>"Smart Irrigation Systems with Automated Multi-Sensor Telemetry & Water Conservation"</strong>, acclaimed for practical scalability and embedded engineering rigor.
+          <h2>Credentials, Research Internships &amp; Technical Competencies</h2>
+          <p class="lead">
+            Comprehensive dossier structured for graduate admissions committees, faculty principal investigators, and industrial R&amp;D teams.
           </p>
         </div>
 
-        <!-- Circuit Design Competition -->
-        <div class="achievement-card silver-border">
-          <div class="badge-ribbon silver">2nd Place</div>
-          <div class="achieve-icon">🥈</div>
-          <h3 class="achieve-title">Circuit Design Competition</h3>
-          <div class="achieve-org">NIST University Engineering Challenge</div>
-          <p class="achieve-desc">
-            Secured 2nd position in a rapid-prototyping competition: designed, debugged, and fabricated a fully functional electrical circuit under tight time constraints, validating superior troubleshooting and analytical capabilities.
-          </p>
-        </div>
-      </div>
+        <div class="dossier-grid">
 
-      <!-- Certifications Sub-grid -->
-      <div class="certifications-wrapper">
-        <h3 class="cert-heading">Professional Certifications</h3>
-        <div class="certs-grid">
-          <div class="cert-card">
-            <div class="cert-icon">☁️</div>
-            <div class="cert-info">
-              <h4 class="cert-title">Foundation of Cloud IoT Edge ML</h4>
-              <div class="cert-issuer">NPTEL • Swayam</div>
-              <p class="cert-detail">Covering edge machine learning models, cloud broker architectures, MQTT streaming, and smart sensor telemetry.</p>
-            </div>
-          </div>
-
-          <div class="cert-card">
-            <div class="cert-icon">⚡</div>
-            <div class="cert-info">
-              <h4 class="cert-title">Smart Grid: Basics to Advanced Technologies</h4>
-              <div class="cert-issuer">NPTEL • Swayam</div>
-              <p class="cert-detail">Advanced power system architectures, smart metering, wide-area monitoring (WAMS), and renewable microgrid integration.</p>
-            </div>
-          </div>
-
-          <div class="cert-card">
-            <div class="cert-icon">🎨</div>
-            <div class="cert-info">
-              <h4 class="cert-title">UI / UX Designing</h4>
-              <div class="cert-issuer">Internshala</div>
-              <p class="cert-detail">Human-centric interface design, wireframing, high-fidelity design systems, and responsive design fundamentals.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section class="section contact-section" id="contact">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-tag">Let's Connect</div>
-        <h2 class="section-title">Get in Touch with Sradha</h2>
-        <p class="section-desc">
-          Interested in discussing power engineering, embedded projects, research collaborations, or career opportunities? Reach out directly!
-        </p>
-      </div>
-
-      <div class="contact-grid">
-        <!-- Contact Information Cards -->
-        <div class="contact-info-panel">
-          <div class="contact-card">
-            <div class="contact-icon">📧</div>
-            <div class="contact-detail">
-              <div class="contact-label">Email Address</div>
-              <a href="mailto:sradhapanigrahi539@gmail.com" class="contact-value">sradhapanigrahi539@gmail.com</a>
-            </div>
-            <button class="copy-btn" onclick="copyToClipboard('sradhapanigrahi539@gmail.com', this)" title="Copy email" aria-label="Copy Email">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-            </button>
-          </div>
-
-          <div class="contact-card">
-            <div class="contact-icon">📱</div>
-            <div class="contact-detail">
-              <div class="contact-label">Phone & WhatsApp</div>
-              <a href="tel:+916371443909" class="contact-value">+91 6371443909</a>
-            </div>
-            <button class="copy-btn" onclick="copyToClipboard('+916371443909', this)" title="Copy phone" aria-label="Copy Phone">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-            </button>
-          </div>
-
-          <div class="contact-card">
-            <div class="contact-icon">📍</div>
-            <div class="contact-detail">
-              <div class="contact-label">Location</div>
-              <div class="contact-value">Berhampur, Odisha, India</div>
-            </div>
-          </div>
-
-          <div class="contact-card">
-            <div class="contact-icon">🔗</div>
-            <div class="contact-detail">
-              <div class="contact-label">LinkedIn Profile</div>
-              <a href="https://linkedin.com/in/sradha-panigrahi-ab732a290" target="_blank" rel="noopener noreferrer" class="contact-value link-highlight">
-                linkedin.com/in/sradha-panigrahi-ab732a290 ↗
+          <!-- Academics Table -->
+          <div class="dossier-card">
+            <div class="dossier-header">
+              <h3><i class="fa-solid fa-graduation-cap"></i> Academic Pedigree</h3>
+              <a href="assets/docs/Sradha_Panigrahi_Resume.pdf" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+                <i class="fa-solid fa-file-pdf"></i> View Official Résumé
               </a>
             </div>
+
+            <div class="table-responsive">
+              <table class="technical-table">
+                <thead>
+                  <tr>
+                    <th>Degree / Program</th>
+                    <th>Institution</th>
+                    <th>Timeline</th>
+                    <th>Specialization &amp; Scope</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="td-strong">B.Tech in Electrical &amp; Electronics Engineering</td>
+                    <td>NIST University, Berhampur, Odisha</td>
+                    <td>2023 – Present</td>
+                    <td>Power Systems, High-Voltage Physics, Multiphysics Modeling, Renewable Energy, Embedded Systems</td>
+                  </tr>
+                  <tr>
+                    <td class="td-strong">Senior Secondary (+2 Science / PCMB)</td>
+                    <td>Sankalp Senior Secondary School, Berhampur</td>
+                    <td>2020 – 2022</td>
+                    <td>Physics, Mathematics, Chemistry, Biology Foundation</td>
+                  </tr>
+                  <tr>
+                    <td class="td-strong">Secondary School Certificate (Matriculation)</td>
+                    <td>K.C Public School, Berhampur, Odisha</td>
+                    <td>2008 – 2020</td>
+                    <td>Science, Mathematics, Computational Fundamentals</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
 
-          <!-- Direct CV Card -->
-          <div class="resume-cta-box">
-            <div class="resume-cta-text">
-              <h4>Download Complete ATS Resume</h4>
-              <p>Official resume featuring full technical skills, internships, and project details.</p>
+          <!-- Research & Professional Experience Timeline -->
+          <div class="dossier-card">
+            <div class="dossier-header">
+              <h3><i class="fa-solid fa-flask-vial"></i> Research &amp; Industrial Experience</h3>
+              <span class="eyebrow" style="margin: 0;">3 Rigorous Roles</span>
             </div>
-            <a href="assets/documents/Sradha_Panigrahi_Resume.pdf" download="Sradha_Panigrahi_Resume.pdf" class="btn btn-primary" target="_blank">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-              <span>Download PDF</span>
+
+            <div class="timeline-list">
+              <!-- IIT Bhubaneswar -->
+              <div class="timeline-item">
+                <span class="timeline-dot"></span>
+                <div class="timeline-role-title">Research Intern — Multiphysics &amp; Electrostatics</div>
+                <div class="timeline-org">Indian Institute of Technology (IIT) Bhubaneswar, Odisha</div>
+                <span class="timeline-date-badge">MAY 2026 – JUL 2026</span>
+                <ul class="timeline-bullets">
+                  <li>Applied COMSOL Multiphysics to design and simulate an Electrostatic Precipitator (ESP) for industrial air pollution abatement.</li>
+                  <li>Executed parametric 2D geometry modeling, physics-based boundary-condition assignment, and non-uniform mesh convergence studies.</li>
+                  <li>Simulated electric-field gradient distributions and charged particulate-matter tracing to compute filtration collection efficiency.</li>
+                </ul>
+              </div>
+
+              <!-- TPSODL -->
+              <div class="timeline-item energy-node">
+                <span class="timeline-dot"></span>
+                <div class="timeline-role-title">Power Systems Intern — Distribution Grid &amp; Substations</div>
+                <div class="timeline-org">TP Southern Odisha Distribution Limited (TPSODL), Odisha</div>
+                <span class="timeline-date-badge">JUN 2025 – JUL 2025</span>
+                <ul class="timeline-bullets">
+                  <li>Analyzed 33kV/11kV power distribution architectures with intensive hands-on exposure to substation design, bus configurations, and grid telemetry.</li>
+                  <li>Investigated predictive maintenance methodologies for high-voltage power transformers and vacuum/SF6 circuit breakers.</li>
+                  <li>Evaluated performance metrics and loss reduction parameters across high-voltage electrical assets to improve operational availability.</li>
+                </ul>
+              </div>
+
+              <!-- NIST University C Programming -->
+              <div class="timeline-item amber-node">
+                <span class="timeline-dot"></span>
+                <div class="timeline-role-title">C Programming &amp; Systems Intern</div>
+                <div class="timeline-org">NIST University, Berhampur, Odisha</div>
+                <span class="timeline-date-badge">MAY 2024 – JUN 2024</span>
+                <ul class="timeline-bullets">
+                  <li>Built rigorous foundational skills in structured programming, memory management, pointers, and algorithmic problem-solving using C.</li>
+                  <li>Engineered computational modules and data structures for embedded hardware interfacing and numerical calculations.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Technical Mastery Matrix -->
+          <div class="dossier-card">
+            <div class="dossier-header">
+              <h3><i class="fa-solid fa-microchip"></i> Technical Competencies &amp; Lab Tooling</h3>
+            </div>
+
+            <div class="competency-grid">
+              <!-- Power Systems -->
+              <div class="competency-box">
+                <h4><i class="fa-solid fa-bolt"></i> Power &amp; Renewable Energy</h4>
+                <div class="skills-badge-flow">
+                  <span class="skill-chip">Power Generation</span>
+                  <span class="skill-chip">Transmission &amp; Distribution</span>
+                  <span class="skill-chip">Switchgear &amp; Protection</span>
+                  <span class="skill-chip">Solar PV Microgrids</span>
+                  <span class="skill-chip">MPPT Control</span>
+                  <span class="skill-chip">Lithium-ion BESS</span>
+                  <span class="skill-chip">Substation Engineering</span>
+                  <span class="skill-chip">Smart Grid Systems</span>
+                </div>
+              </div>
+
+              <!-- Simulation & CAD -->
+              <div class="competency-box">
+                <h4><i class="fa-solid fa-laptop-code"></i> Simulation, Modeling &amp; CAD</h4>
+                <div class="skills-badge-flow">
+                  <span class="skill-chip">COMSOL Multiphysics</span>
+                  <span class="skill-chip">MATLAB / Simulink</span>
+                  <span class="skill-chip">ETAP</span>
+                  <span class="skill-chip">LabVIEW</span>
+                  <span class="skill-chip">Electrostatics Physics</span>
+                  <span class="skill-chip">Particle Tracing</span>
+                  <span class="skill-chip">Finite Element Analysis</span>
+                </div>
+              </div>
+
+              <!-- Embedded Systems -->
+              <div class="competency-box">
+                <h4><i class="fa-solid fa-memory"></i> Embedded Hardware &amp; Processors</h4>
+                <div class="skills-badge-flow">
+                  <span class="skill-chip">Arduino</span>
+                  <span class="skill-chip">ESP32 / ESP8266</span>
+                  <span class="skill-chip">Raspberry Pi 5</span>
+                  <span class="skill-chip">8051 Microcontroller</span>
+                  <span class="skill-chip">8086 Microprocessor</span>
+                  <span class="skill-chip">8255 PPI</span>
+                  <span class="skill-chip">Actuators &amp; Solenoids</span>
+                </div>
+              </div>
+
+              <!-- Programming & IoT -->
+              <div class="competency-box">
+                <h4><i class="fa-solid fa-network-wired"></i> Programming, IoT &amp; Protocols</h4>
+                <div class="skills-badge-flow">
+                  <span class="skill-chip">Python</span>
+                  <span class="skill-chip">C Programming</span>
+                  <span class="skill-chip">Assembly Language</span>
+                  <span class="skill-chip">SQL</span>
+                  <span class="skill-chip">Sensor Integration</span>
+                  <span class="skill-chip">MQTT Protocol</span>
+                  <span class="skill-chip">UI/UX Design</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Honors & Certifications -->
+          <div class="dossier-card">
+            <div class="dossier-header">
+              <h3><i class="fa-solid fa-trophy"></i> Honors, Awards &amp; Certifications</h3>
+            </div>
+
+            <div class="honor-card-grid">
+              <!-- Award 1 -->
+              <div class="honor-item">
+                <i class="fa-solid fa-medal honor-icon" style="color: #f59e0b;"></i>
+                <div class="honor-details">
+                  <h4>2nd Place — Circuit Design Competition</h4>
+                  <p>NIST University — Designed a functional electrical circuit under accelerated deadline, demonstrating strong analytical and troubleshooting skills.</p>
+                </div>
+              </div>
+
+              <!-- Award 2 -->
+              <div class="honor-item">
+                <i class="fa-solid fa-award honor-icon" style="color: #10b981;"></i>
+                <div class="honor-details">
+                  <h4>Paper Presentation Winner</h4>
+                  <p>NIST University — Presented an award-winning technical paper on precision smart irrigation systems and IoT sensor telemetry.</p>
+                </div>
+              </div>
+
+              <!-- Cert 1 -->
+              <div class="honor-item">
+                <i class="fa-solid fa-certificate honor-icon" style="color: #0284c7;"></i>
+                <div class="honor-details">
+                  <h4>NPTEL: Smart Grid – Basics to Advanced Technologies</h4>
+                  <p>Ministry of Education (MoE, Govt. of India) — Advanced grid architectures, distributed energy resources &amp; wide-area monitoring.</p>
+                </div>
+              </div>
+
+              <!-- Cert 2 -->
+              <div class="honor-item">
+                <i class="fa-solid fa-certificate honor-icon" style="color: #7c3aed;"></i>
+                <div class="honor-details">
+                  <h4>NPTEL: Foundation of Cloud IoT Edge ML</h4>
+                  <p>Ministry of Education (MoE, Govt. of India) — Cloud-to-edge IoT pipelines, micro-AI model deployment &amp; telemetry.</p>
+                </div>
+              </div>
+
+              <!-- Cert 3 -->
+              <div class="honor-item">
+                <i class="fa-solid fa-pen-ruler honor-icon" style="color: #ec4899;"></i>
+                <div class="honor-details">
+                  <h4>Internshala: UI/UX Designing</h4>
+                  <p>Human-centered interface architecture, design heuristics, user workflow wireframing, and interactive prototyping.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TAIWAN MS RESEARCH HORIZON ==================== -->
+    <section id="taiwan-focus" class="section" style="padding-top: 20px;">
+      <div class="container">
+        <div class="taiwan-spotlight-card">
+          <i class="fa-solid fa-compass taiwan-watermark-icon" aria-hidden="true"></i>
+
+          <div class="taiwan-grid">
+            <div class="taiwan-narrative">
+              <div class="eyebrow" style="color: var(--accent-voltage);">
+                <i class="fa-solid fa-earth-asia"></i> GRADUATE RESEARCH VISION · TAIWAN MS
+              </div>
+              <h3>Pioneering Sustainable Energy, Smart Grids &amp; Advanced Multiphysics</h3>
+              <p>
+                Taiwan is at the global forefront of high-tech manufacturing, clean energy transformation, and power electronics infrastructure. My academic background and hands-on laboratory experience at <strong>IIT Bhubaneswar</strong> and <strong>TPSODL</strong> directly align with Master of Science programs in Taiwan focusing on:
+              </p>
+
+              <div class="taiwan-target-chips">
+                <span class="target-uni-chip"><i class="fa-solid fa-university"></i> National Taiwan University (NTU)</span>
+                <span class="target-uni-chip"><i class="fa-solid fa-university"></i> National Tsing Hua University (NTHU)</span>
+                <span class="target-uni-chip"><i class="fa-solid fa-university"></i> National Yang Ming Chiao Tung University (NYCU)</span>
+                <span class="target-uni-chip"><i class="fa-solid fa-university"></i> National Taiwan University of Science and Technology (NTUST)</span>
+                <span class="target-uni-chip"><i class="fa-solid fa-university"></i> National Central University (NCU)</span>
+              </div>
+            </div>
+
+            <div class="taiwan-pillars-box">
+              <div class="pillar-item">
+                <i class="fa-solid fa-solar-panel"></i>
+                <div>
+                  <strong>Renewable Energy &amp; Microgrid Stability</strong>
+                  <p>Integrating large-scale PV, battery storage (BESS), and advanced MPPT algorithms into smart distribution grids.</p>
+                </div>
+              </div>
+
+              <div class="pillar-item">
+                <i class="fa-solid fa-atom"></i>
+                <div>
+                  <strong>High-Voltage &amp; Cleanroom Physics (COMSOL)</strong>
+                  <p>Electrostatics and particulate transport modeling critical for semiconductor fabrication cleanrooms and environmental air quality.</p>
+                </div>
+              </div>
+
+              <div class="pillar-item">
+                <i class="fa-solid fa-microchip"></i>
+                <div>
+                  <strong>Embedded AIoT for Grid &amp; Industrial Sensing</strong>
+                  <p>Edge microcontrollers for automated diagnostics, predictive maintenance, and real-time telemetry.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TECHNICAL INQUIRY & COLLABORATION ==================== -->
+    <section id="inquiry" class="section">
+      <div class="container">
+        <div class="inquiry-panel">
+          <div class="inquiry-grid">
+            <div class="inquiry-info">
+              <div class="eyebrow">
+                <span class="eyebrow-dot"></span>
+                COLLABORATION &amp; INQUIRY
+              </div>
+              <h3>Initiate an Engineering Discussion</h3>
+              <p>
+                Whether you are a university professor discussing Master's research opportunities, an industrial team exploring microgrid simulations, or an engineering collaborator seeking embedded IoT expertise — feel free to send a targeted inquiry.
+              </p>
+
+              <div class="quick-template-btns">
+                <span>Select Quick Inquiry Preset:</span>
+                <button type="button" class="template-btn" data-template-key="taiwan-ms">
+                  <i class="fa-solid fa-graduation-cap"></i> Taiwan MS Research &amp; Academic Inquiry
+                </button>
+                <button type="button" class="template-btn" data-template-key="comsol">
+                  <i class="fa-solid fa-atom"></i> COMSOL Multiphysics &amp; Electrostatics
+                </button>
+                <button type="button" class="template-btn" data-template-key="microgrid">
+                  <i class="fa-solid fa-solar-panel"></i> Solar PV Microgrid &amp; MPPT Modeling
+                </button>
+                <button type="button" class="template-btn" data-template-key="iot">
+                  <i class="fa-solid fa-microchip"></i> Embedded IoT &amp; Optical Instrumentation
+                </button>
+              </div>
+            </div>
+
+            <form class="inquiry-form" id="inquiry-form">
+              <div class="form-group">
+                <label for="inquiry-name">Your Full Name / Lab / Organization</label>
+                <input type="text" id="inquiry-name" class="form-input" placeholder="e.g., Prof. Chen / Grid Engineering Lab" required />
+              </div>
+
+              <div class="form-group">
+                <label for="inquiry-email">Your Email Address</label>
+                <input type="email" id="inquiry-email" class="form-input" placeholder="name@institution.edu" required />
+              </div>
+
+              <div class="form-group">
+                <label for="inquiry-subject">Subject Line</label>
+                <input type="text" id="inquiry-subject" class="form-input" value="Technical Collaboration Inquiry" required />
+              </div>
+
+              <div class="form-group">
+                <label for="inquiry-message">Inquiry Details</label>
+                <textarea id="inquiry-message" class="form-textarea" placeholder="Detail your research scope, simulation requirements, or graduate opportunity..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="align-self: flex-start;">
+                <i class="fa-solid fa-paper-plane"></i> Transmit Inquiry
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== SITE FOOTER ==================== -->
+  <footer class="site-footer" id="contact">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div>
+          <div class="footer-brand-title">SRADHA PANIGRAHI</div>
+          <p class="footer-brand-text">
+            Electrical &amp; Electronics Engineering Undergraduate at NIST University. Advancing power systems, renewable energy microgrids, high-voltage multiphysics modeling, and embedded intelligence.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://linkedin.com/in/sradha-panigrahi-ab732a290" target="_blank" rel="noopener" class="social-icon-btn" aria-label="LinkedIn Profile">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="mailto:sradhapanigrahi539@gmail.com" class="social-icon-btn" aria-label="Direct Email">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+            <a href="tel:+916371443909" class="social-icon-btn" aria-label="Telephone">
+              <i class="fa-solid fa-phone"></i>
             </a>
           </div>
         </div>
 
-        <!-- Interactive Contact Form -->
-        <div class="contact-form-panel">
-          <form class="contact-form" id="contactForm">
-            <h3 class="form-title">Send a Direct Message</h3>
-            
-            <div class="form-group">
-              <label for="senderName">Your Name</label>
-              <input type="text" id="senderName" name="name" placeholder="e.g. Dr. Ramesh Kumar / Recruiter" required>
-            </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="#projects"><i class="fa-solid fa-chevron-right"></i> Builds &amp; Innovations</a></li>
+            <li><a href="#research"><i class="fa-solid fa-chevron-right"></i> Research Dossier</a></li>
+            <li><a href="#taiwan-focus"><i class="fa-solid fa-chevron-right"></i> Taiwan MS Horizon</a></li>
+            <li><a href="assets/docs/Sradha_Panigrahi_Resume.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-chevron-right"></i> Download Résumé (PDF)</a></li>
+          </ul>
+        </div>
 
-            <div class="form-group">
-              <label for="senderEmail">Your Email</label>
-              <input type="email" id="senderEmail" name="email" placeholder="e.g. contact@company.org" required>
-            </div>
-
-            <div class="form-group">
-              <label for="msgSubject">Subject</label>
-              <input type="text" id="msgSubject" name="subject" placeholder="Project Inquiry / Job Opportunity / Research" required>
-            </div>
-
-            <div class="form-group">
-              <label for="msgContent">Message</label>
-              <textarea id="msgContent" name="message" rows="5" placeholder="Share your message or opportunity details..." required></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-primary btn-block">
-              <span>Send Message</span>
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
-            </button>
-            <div id="formStatus" class="form-status"></div>
-          </form>
+        <div class="footer-col">
+          <h4>Direct Connect</h4>
+          <div class="footer-contact-entry">
+            <i class="fa-solid fa-envelope"></i>
+            <span>sradhapanigrahi539@gmail.com</span>
+          </div>
+          <div class="footer-contact-entry">
+            <i class="fa-solid fa-phone"></i>
+            <span>+91 6371443909</span>
+          </div>
+          <div class="footer-contact-entry">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Berhampur, Odisha, India</span>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container footer-container">
-      <div class="footer-left">
-        <div class="footer-brand">⚡ Sradha Panigrahi</div>
-        <p class="footer-sub">Electrical & Electronics Engineer • Power Systems & Intelligent Computing</p>
-      </div>
-
-      <div class="footer-links">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-        <a href="https://linkedin.com/in/sradha-panigrahi-ab732a290" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      </div>
-
-      <div class="footer-bottom">
-        <p>© <span id="currentYear"></span> Sradha Panigrahi. All rights reserved.</p>
-        <button id="backToTop" class="back-to-top" title="Back to top" aria-label="Back to top">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
-        </button>
+      <div class="footer-bottom-bar">
+        <p>&copy; <span id="current-year">2026</span> Sradha Panigrahi. All rights reserved.</p>
+        <p>Built with <span style="color: var(--accent-voltage);">High-Voltage Precision</span> &amp; <span style="color: var(--accent-energy);">Clean Engineering</span></p>
       </div>
     </div>
   </footer>
 
-  <!-- Project Modals -->
-
-  <!-- Modal 1: UPQC with ANN -->
-  <div class="modal-backdrop" id="modal-upqc" aria-hidden="true">
-    <div class="modal-dialog">
-      <button class="modal-close" aria-label="Close Modal">&times;</button>
-      <div class="modal-header">
-        <div class="modal-tag">Flagship Power Quality & Artificial Intelligence</div>
-        <h3 class="modal-title">Design of ANN Controller & Implementation with UPQC Integrated with Microgrid</h3>
-        <div class="modal-meta">Platform: MATLAB / Simulink • Neural Network Toolbox • SimPowerSystems</div>
-      </div>
-      <div class="modal-body">
-        <h4>1. Problem Context & Motivation</h4>
-        <p>
-          Microgrids integrated with high penetrations of intermittent renewable energy sources (Solar PV, Wind) and non-linear loads 
-          suffer from severe power quality issues such as voltage sags, swells, flickers, and excessive Total Harmonic Distortion (THD). 
-          Standard proportional-integral (PI) controllers suffer from slow transient response, parameter drift, and phase delays during rapid grid disturbances.
-        </p>
-
-        <h4>2. Architectural Solution</h4>
-        <p>
-          This project implements a Unified Power Quality Conditioner (UPQC) consisting of two back-to-back voltage source converters (VSC) 
-          sharing a common DC-link capacitor:
-        </p>
-        <ul class="modal-bullet-list">
-          <li><strong>Series Active Power Filter (Series APF):</strong> Acts as a controlled voltage source in series with the grid feeder, isolating non-linear sensitive loads from grid voltage sags, swells, and unbalances.</li>
-          <li><strong>Shunt Active Power Filter (Shunt APF):</strong> Injects compensating currents at the point of common coupling (PCC) to eliminate load current harmonics, regulate the common DC-link voltage, and compensate reactive power.</li>
-          <li><strong>Intelligent ANN Controller:</strong> Developed a multi-layer feedforward Artificial Neural Network trained using Levenberg-Marquardt backpropagation to generate reference gating pulses for both converters with near-instantaneous tracking and dynamic robustness.</li>
-        </ul>
-
-        <h4>3. Key Results & Validation</h4>
-        <ul class="modal-bullet-list">
-          <li>Maintained PCC load voltage strictly at 1.0 p.u. even during sudden 30% grid voltage sags and 25% voltage swells.</li>
-          <li>Reduced source current Total Harmonic Distortion (THD) from >22% down to under 2.8%, well within IEEE 519 compliance limits.</li>
-          <li>Settling time during transient switching reduced by ~60% compared to benchmark PI controllers.</li>
-        </ul>
-      </div>
+  <!-- ==================== LIGHTBOX MODAL ==================== -->
+  <div class="lightbox-modal" id="lightbox-modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="lightbox-content-box">
+      <button class="lightbox-close-btn" id="lightbox-close" aria-label="Close Preview">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <img id="lightbox-img" src="" alt="High resolution engineering preview" />
+      <div class="lightbox-caption" id="lightbox-caption"></div>
     </div>
   </div>
 
-  <!-- Modal 2: Digital Signal Filter Python -->
-  <div class="modal-dialog-wrapper modal-backdrop" id="modal-dsp" aria-hidden="true">
-    <div class="modal-dialog">
-      <button class="modal-close" aria-label="Close Modal">&times;</button>
-      <div class="modal-header">
-        <div class="modal-tag">Digital Signal Processing & Python Analytics</div>
-        <h3 class="modal-title">Digital Filter of Noise Reduction & Feature Extraction from Signal Using Python</h3>
-        <div class="modal-meta">Platform: Python 3.x • SciPy.signal • NumPy • Matplotlib</div>
-      </div>
-      <div class="modal-body">
-        <h4>1. Objective</h4>
-        <p>
-          To engineer an end-to-end Python pipeline capable of ingesting noisy electrical and sensor telemetry, 
-          attenuating high-frequency white Gaussian noise and baseline drift, and extracting critical diagnostic features.
-        </p>
-
-        <h4>2. Filter Implementations & Methodology</h4>
-        <ul class="modal-bullet-list">
-          <li><strong>IIR Butterworth Filter:</strong> Designed maximally flat magnitude response bandpass and lowpass filters via <code>scipy.signal.butter</code> and applied zero-phase digital filtering with <code>scipy.signal.filtfilt</code> to avoid phase distortion.</li>
-          <li><strong>Chebyshev Type II / Notch Filtering:</strong> Targeted 50 Hz power-line interference rejection without modifying neighboring signal frequencies.</li>
-          <li><strong>Discrete Wavelet Transform (DWT):</strong> Performed Daubechies (db4) multi-level wavelet decomposition with soft thresholding for non-stationary transient noise de-noising.</li>
-        </ul>
-
-        <h4>3. Feature Extraction Pipeline</h4>
-        <p>
-          Extracted high-value features for classification:
-        </p>
-        <ul class="modal-bullet-list">
-          <li><strong>Time-Domain Metrics:</strong> Root Mean Square (RMS), Peak-to-Peak amplitude, Crest Factor, Kurtosis, and Skewness.</li>
-          <li><strong>Frequency-Domain Features:</strong> Welch’s Power Spectral Density (PSD), Spectral Centroid, Band Power Ratios, and dominant harmonic peaks via Fast Fourier Transform (FFT).</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal 3: Smart Irrigation -->
-  <div class="modal-dialog-wrapper modal-backdrop" id="modal-irrigation" aria-hidden="true">
-    <div class="modal-dialog">
-      <button class="modal-close" aria-label="Close Modal">&times;</button>
-      <div class="modal-header">
-        <div class="modal-tag">Embedded Systems & NIST Paper Winner</div>
-        <h3 class="modal-title">Smart Irrigation System with Automated Sensor Integration</h3>
-        <div class="modal-meta">Platform: ESP32 / Arduino • Embedded C • Sensors & Solenoids</div>
-      </div>
-      <div class="modal-body">
-        <h4>1. Project Summary</h4>
-        <p>
-          Traditional agriculture accounts for over 70% of freshwater usage with extensive runoff wastage. 
-          This project created an autonomous, low-power irrigation node that monitors volumetric soil water content, 
-          ambient temperature, and humidity, dispatching water precisely when root zones reach water-stress thresholds.
-        </p>
-
-        <h4>2. Hardware Architecture & Sensors</h4>
-        <ul class="modal-bullet-list">
-          <li><strong>Microcontroller:</strong> ESP32 with dual-core processing and low-power sleep modes.</li>
-          <li><strong>Sensors:</strong> Capacitive Soil Moisture Sensor v1.2 (corrosion-resistant), DHT22 temperature and humidity sensor, and Hall-effect water flow meter.</li>
-          <li><strong>Actuators:</strong> Optocoupler-isolated 12V relay modules controlling high-pressure DC solenoid water pumps.</li>
-        </ul>
-
-        <h4>3. Accomplishment</h4>
-        <p>
-          Awarded <strong>1st Prize in Paper Presentation</strong> at NIST University for novel algorithm design balancing soil percolation rates with real-time evapotranspiration estimates.
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal 4: ESP COMSOL -->
-  <div class="modal-dialog-wrapper modal-backdrop" id="modal-esp" aria-hidden="true">
-    <div class="modal-dialog">
-      <button class="modal-close" aria-label="Close Modal">&times;</button>
-      <div class="modal-header">
-        <div class="modal-tag">Research at IIT Bhubaneswar</div>
-        <h3 class="modal-title">Electrostatic Precipitator (ESP) Design & Multiphysics Simulation</h3>
-        <div class="modal-meta">Platform: COMSOL Multiphysics • AC/DC Module • Particle Tracing Module</div>
-      </div>
-      <div class="modal-body">
-        <h4>1. Research Overview</h4>
-        <p>
-          Conducted during the research internship at IIT Bhubaneswar. Electrostatic Precipitators are critical filtration devices 
-          used in thermal power plants and metal smelting factories to capture fine fly ash and toxic particulate matter before stack emission.
-        </p>
-
-        <h4>2. Multiphysics Coupling</h4>
-        <ul class="modal-bullet-list">
-          <li>Coupled the Electrostatics Physics Interface (calculating electric potential and field gradients from high-voltage corona discharge wires) with Particle Tracing for Fluid Flow.</li>
-          <li>Modelled Coulombic charging, dielectric polarization, and drag forces acting on micro-scale particulate matter (1 µm to 10 µm).</li>
-          <li>Applied boundary layer meshing along collecting plates to accurately resolve near-wall velocity and electric field gradients.</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal 5: PV Microgrid -->
-  <div class="modal-dialog-wrapper modal-backdrop" id="modal-pv" aria-hidden="true">
-    <div class="modal-dialog">
-      <button class="modal-close" aria-label="Close Modal">&times;</button>
-      <div class="modal-header">
-        <div class="modal-tag">Power Systems & Renewable Energy</div>
-        <h3 class="modal-title">Grid-Connected PV Microgrid Modeling with MPPT Controller</h3>
-        <div class="modal-meta">Platform: MATLAB • Simulink • Simscape Electrical</div>
-      </div>
-      <div class="modal-body">
-        <h4>1. Engineering Objectives</h4>
-        <p>
-          To simulate a robust 6.84 kW Photovoltaic (PV) array interconnected with a three-phase utility distribution grid, 
-          incorporating an intelligent energy storage buffer and active power curtailment strategies.
-        </p>
-
-        <h4>2. Subsystem Details</h4>
-        <ul class="modal-bullet-list">
-          <li><strong>PV Array & MPPT:</strong> Modeled series-parallel string configuration with Perturb & Observe (P&O) algorithm dynamically altering boost converter duty cycle to track the Maximum Power Point.</li>
-          <li><strong>Lithium-ion BESS:</strong> Bi-directional buck-boost DC-DC converter regulates the DC bus voltage, absorbing excess solar generation and injecting reserve power during irradiance dips.</li>
-          <li><strong>Grid Inverter Control:</strong> Phase-Locked Loop (PLL) grid synchronization and dq0 vector control for active/reactive power decoupling.</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <!-- Toast Notification -->
-  <div id="toast" class="toast" role="status" aria-live="polite"></div>
-
-  <!-- JavaScript -->
-  <script src="assets/js/main.js"></script>
+  <!-- Main JavaScript File -->
+  <script src="js/main.js" defer></script>
 </body>
 </html>

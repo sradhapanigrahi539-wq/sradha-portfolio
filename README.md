@@ -1,81 +1,53 @@
-# Sradha Panigrahi — Professional Portfolio Website
+# Sradha Panigrahi — Electrical & Electronics Engineering Portfolio
 
-⚡ **Electrical & Electronics Engineer | Power Systems • Smart Grid • ANN Controllers • Embedded IoT • Signal Processing**
+A modern, high-precision engineering portfolio for **Sradha Panigrahi** — B.Tech in Electrical & Electronics Engineering at NIST University.
 
-This is the official personal portfolio website for **Sradha Panigrahi**, crafted to showcase advanced engineering projects, research internships, academic credentials, and core competencies.
-
----
-
-## 🌟 Key Features
-
-- **Profile & Visual Identity**: Integrated high-resolution professional headshot with an interactive holographic circuit ring and floating dynamic tech badges.
-- **Dynamic Background Canvas**: Interactive neural synapse & electrical grid network simulation in HTML5 Canvas responding to mouse physics.
-- **Dark / Light Mode**: Seamless theme switcher with user persistence using `localStorage`.
-- **Custom Project Showcase** (Ordered to highlight Multiphysics, AI Power Quality, Grid Dynamics, IoT, & DSP):
-  1. **Electrostatic Precipitator (ESP) Design & Multiphysics Simulation** (*Research at IIT Bhubaneswar using COMSOL Multiphysics*)
-  2. **Design of ANN Controller & Implementation with UPQC Integrated with Microgrid** (*Flagship Power Quality & Artificial Intelligence Project in MATLAB/Simulink*)
-  3. **Grid-Connected PV Microgrid Modeling with MPPT Controller** (*6.84 kW Solar PV + Li-ion BESS in MATLAB/Simulink*)
-  4. **Smart Irrigation System with Automated Sensor Integration** (*ESP32/Arduino, moisture sensing & solenoid actuation — 1st Prize Paper Presentation Winner*)
-  5. **Digital Filter of Noise Reduction & Feature Extraction from Signal Using Python** (*DSP pipeline using SciPy, NumPy, and Matplotlib*)
-  *(Note: "Knocking Pattern Smart Door Lock" and "PORTA-MP Microplastic Detector" have been excluded as requested).*
-- **Interactive Project Modals**: Deep-dive technical specifications, schematics, and performance metrics accessible via modal views.
-- **Live ATS Resume Download**: Direct one-click download of the complete `Sradha_Panigrahi_Resume.pdf`.
-- **Interactive Engineer Console (Easter Egg)**: Built-in terminal allowing recruiters and engineers to run commands (`skills`, `projects`, `experience`, `upqc`, `contact`, `download-cv`).
-- **Comprehensive Skills Matrix**: Categorized into Power Systems, Simulation & CAD, Embedded & Hardware, and Programming & Analytics.
-- **Interactive Contact Panel**: One-click "Copy Email" and "Copy Phone" buttons with instant feedback toast, alongside an interactive message form.
+Specialized in:
+- **Power Systems & Renewable Microgrids** (MATLAB / Simulink, 6.84 kW Solar PV, MPPT, BESS)
+- **High-Voltage Physics & Electrostatics** (COMSOL Multiphysics 2D Simulation, Particle Tracing)
+- **Substation Engineering & Grid SCADA** (TPSODL, 33kV/11kV Transformer Diagnostics, ETAP)
+- **Applied Embedded IoT & Edge Intelligence** (Raspberry Pi 5, ESP32, Nile Red Optical Detection)
+- **Taiwan MS Horizon** (Graduate research preparation for NTU, NTHU, NYCU, NTUST, NCU)
 
 ---
 
-## 📂 Project Directory Structure
+## ⚡ Key Features
 
-```text
-sradha-portfolio/
-│
-├── index.html                   # Semantic HTML5 single-page application
-├── README.md                    # Project documentation & deployment guide
-│
+- **Dynamic Power Grid & Substation Schematic**: High-voltage busbars, current pulse animations, and harmonic waveforms.
+- **Instrument Telemetry Spec Strip**: Live counter animations and SVG circular gauges for key academic metrics.
+- **Text-to-Speech (TTS) Narration**: Native speech synthesizer that reads project summaries with animated soundwaves.
+- **Interactive Lightbox Modal**: High-resolution viewing of simulation vector fields and hardware prototypes.
+- **Dual Theme Support**: Seamless toggle between *Obsidian Substation (Dark)* and *Drafting Blueprint (Light)* mode.
+- **Taiwan MS Horizon**: Dedicated section detailing graduate research alignment with Taiwan's green energy transformation and advanced engineering labs.
+- **One-Click Inquiry Presets**: Dynamic inquiry form that generates structured messages for professors and collaborators.
+
+---
+
+## 📁 Repository Structure
+
+```
+├── index.html                           # Single-page application
+├── css/
+│   └── style.css                        # Design tokens, themes, layout, gauges & animations
+├── js/
+│   └── main.js                          # TTS reader, gauges, counters, lightbox, inquiry
 └── assets/
-    ├── css/
-    │   └── style.css            # Modern CSS3 styling (dark/light themes, animations)
-    ├── js/
-    │   └── main.js              # Interactive neural canvas, filters, modals, terminal
-    ├── images/
-    │   └── profile.jpg          # Professional headshot
-    └── documents/
-        └── Sradha_Panigrahi_Resume.pdf  # ATS-optimized resume
+    ├── docs/
+    │   └── Sradha_Panigrahi_Resume.pdf  # Official resume PDF
+    └── img/
+        ├── sradha.jpg                   # Portrait photo
+        ├── esp_sim.jpg                  # 2D COMSOL ESP simulation plot
+        ├── pv_microgrid.jpg             # MATLAB Simulink PV microgrid schematic
+        ├── microplastic.jpg             # PORTA-MP optical Raspberry Pi 5 build
+        ├── knock_lock.jpg               # ESP32 knock lock hardware setup
+        ├── substation.jpg               # 33kV/11kV Substation SCADA interface
+        └── irrigation.jpg               # Solar IoT soil telemetry field deployment
 ```
 
 ---
 
-## 🚀 How to Run Locally
+## 🚀 Live Deployment
 
-### Option 1: Direct File Open
-Simply double-click [`index.html`](file:///C:/Users/SRADHA%20PANIGRAHI/.gemini/antigravity/scratch/sradha-portfolio/index.html) or right-click and select **Open with Chrome / Edge / Firefox**.
+Built with pure semantic HTML5, modern CSS3, and Vanilla JavaScript with no dependencies or build steps required.
 
-### Option 2: Run via Local Python Server
-Open terminal in the `sradha-portfolio` directory:
-```bash
-python -m http.server 8000
-```
-Then visit: `http://localhost:8000`
-
----
-
-## 🌐 Free 1-Click Deployment (GitHub Pages)
-
-To publish this portfolio live to the web under your personal URL (e.g. `https://sradhapanigrahi.github.io`):
-1. Create a new repository on GitHub named `portfolio` or `sradhapanigrahi.github.io`.
-2. Push all files from `sradha-portfolio/` to the repository:
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial commit: Sradha Panigrahi Engineering Portfolio"
-   git branch -M main
-   git remote add origin https://github.com/<your-username>/<repo-name>.git
-   git push -u origin main
-   ```
-3. In your GitHub repository:
-   - Go to **Settings** > **Pages**.
-   - Under **Build and deployment**, select **Source: Deploy from a branch**.
-   - Set Branch to `main` / `root` and click **Save**.
-4. Your website will be live in 1-2 minutes!
+Deployable instantly to **Vercel**, **GitHub Pages**, or **Netlify**.
